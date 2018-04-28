@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		822A00B020925F8E001DD101 /* HasImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00AF20925F8E001DD101 /* HasImageProvider.swift */; };
+		822A00B220926004001DD101 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00B120926004001DD101 /* Result.swift */; };
+		822A00B4209261F9001DD101 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00B3209261F9001DD101 /* AppDependency.swift */; };
+		822A00B920926DBD001DD101 /* ImageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00B820926DBD001DD101 /* ImageVM.swift */; };
+		822A00BD20926F79001DD101 /* ImageVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00BC20926F79001DD101 /* ImageVMTests.swift */; };
 		828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFB97209252BA00EDE038 /* AppDelegate.swift */; };
 		828CFB9A209252BA00EDE038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFB99209252BA00EDE038 /* ViewController.swift */; };
 		828CFB9D209252BA00EDE038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828CFB9B209252BA00EDE038 /* Main.storyboard */; };
 		828CFB9F209252BA00EDE038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828CFB9E209252BA00EDE038 /* Assets.xcassets */; };
 		828CFBA2209252BA00EDE038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828CFBA0209252BA00EDE038 /* LaunchScreen.storyboard */; };
 		828CFBAD209252BA00EDE038 /* SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBAC209252BA00EDE038 /* SampleAppTests.swift */; };
+		828CFBB9209253FF00EDE038 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBB8209253FF00EDE038 /* RootCoordinator.swift */; };
+		828CFBBC2092546100EDE038 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBBB2092546100EDE038 /* Coordinator.swift */; };
+		82CA798520950C7300CED1C6 /* CircleProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798420950C7300CED1C6 /* CircleProgressViewController.swift */; };
+		82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798620950D6600CED1C6 /* CircleProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		822A00AF20925F8E001DD101 /* HasImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasImageProvider.swift; sourceTree = "<group>"; };
+		822A00B120926004001DD101 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		822A00B3209261F9001DD101 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		822A00B820926DBD001DD101 /* ImageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVM.swift; sourceTree = "<group>"; };
+		822A00BC20926F79001DD101 /* ImageVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVMTests.swift; sourceTree = "<group>"; };
 		828CFB94209252BA00EDE038 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828CFB97209252BA00EDE038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828CFB99209252BA00EDE038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +50,10 @@
 		828CFBA8209252BA00EDE038 /* SampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		828CFBAC209252BA00EDE038 /* SampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppTests.swift; sourceTree = "<group>"; };
 		828CFBAE209252BA00EDE038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828CFBB8209253FF00EDE038 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		828CFBBB2092546100EDE038 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		82CA798420950C7300CED1C6 /* CircleProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressViewController.swift; sourceTree = "<group>"; };
+		82CA798620950D6600CED1C6 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		822A00AE20925F6C001DD101 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				822A00AF20925F8E001DD101 /* HasImageProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		822A00B520926AC0001DD101 /* ApplicationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				82CA79882095120600CED1C6 /* Extensions */,
+				82CA798320950C4A00CED1C6 /* CircleProgress */,
+				822A00B620926AD5001DD101 /* Image */,
+			);
+			path = ApplicationControllers;
+			sourceTree = "<group>";
+		};
+		822A00B620926AD5001DD101 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				822A00B820926DBD001DD101 /* ImageVM.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		828CFB8B209252BA00EDE038 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +121,17 @@
 		828CFB96209252BA00EDE038 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				822A00B520926AC0001DD101 /* ApplicationControllers */,
+				828CFBBA2092545600EDE038 /* Protocols */,
+				828CFBB7209253E600EDE038 /* Coordinators */,
 				828CFB97209252BA00EDE038 /* AppDelegate.swift */,
 				828CFB99209252BA00EDE038 /* ViewController.swift */,
+				822A00B120926004001DD101 /* Result.swift */,
 				828CFB9B209252BA00EDE038 /* Main.storyboard */,
 				828CFB9E209252BA00EDE038 /* Assets.xcassets */,
 				828CFBA0209252BA00EDE038 /* LaunchScreen.storyboard */,
 				828CFBA3209252BA00EDE038 /* Info.plist */,
+				822A00B3209261F9001DD101 /* AppDependency.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -92,8 +141,42 @@
 			children = (
 				828CFBAC209252BA00EDE038 /* SampleAppTests.swift */,
 				828CFBAE209252BA00EDE038 /* Info.plist */,
+				822A00BC20926F79001DD101 /* ImageVMTests.swift */,
 			);
 			path = SampleAppTests;
+			sourceTree = "<group>";
+		};
+		828CFBB7209253E600EDE038 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				828CFBB8209253FF00EDE038 /* RootCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		828CFBBA2092545600EDE038 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				822A00AE20925F6C001DD101 /* Services */,
+				828CFBBB2092546100EDE038 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		82CA798320950C4A00CED1C6 /* CircleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				82CA798420950C7300CED1C6 /* CircleProgressViewController.swift */,
+				82CA798620950D6600CED1C6 /* CircleProgressView.swift */,
+			);
+			path = CircleProgress;
+			sourceTree = "<group>";
+		};
+		82CA79882095120600CED1C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822A00B220926004001DD101 /* Result.swift in Sources */,
+				828CFBBC2092546100EDE038 /* Coordinator.swift in Sources */,
 				828CFB9A209252BA00EDE038 /* ViewController.swift in Sources */,
+				828CFBB9209253FF00EDE038 /* RootCoordinator.swift in Sources */,
+				82CA798520950C7300CED1C6 /* CircleProgressViewController.swift in Sources */,
+				822A00B020925F8E001DD101 /* HasImageProvider.swift in Sources */,
 				828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */,
+				82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */,
+				822A00B920926DBD001DD101 /* ImageVM.swift in Sources */,
+				822A00B4209261F9001DD101 /* AppDependency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822A00BD20926F79001DD101 /* ImageVMTests.swift in Sources */,
 				828CFBAD209252BA00EDE038 /* SampleAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
