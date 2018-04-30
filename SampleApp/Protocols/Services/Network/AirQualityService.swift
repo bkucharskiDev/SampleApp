@@ -24,13 +24,13 @@ final class AirQualityService: AirQualityServiceProtocol {
         executeAndDecode(urlRequest: urlRequest, completion: completion)
     }
     
-    func getStationSensors(stationId: Int ,completion: @escaping ((Result<Data>) -> Void)) {
+    func getStationSensors(stationId: Int ,completion: @escaping ((Result<[Sensor]>) -> Void)) {
         let urlRequest = AirQualityRequest.stationSensors(stationId).asURLRequest()
         
         executeAndDecode(urlRequest: urlRequest, completion: completion)
     }
     
-    func getSensorData(sensorId: Int, completion: @escaping ((Result<Data>) -> Void)) {
+    func getSensorData(sensorId: Int, completion: @escaping ((Result<SensorData>) -> Void)) {
         let urlRequest = AirQualityRequest.sensorData(sensorId).asURLRequest()
         
         executeAndDecode(urlRequest: urlRequest, completion: completion)
