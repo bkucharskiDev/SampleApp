@@ -12,9 +12,6 @@ final class AirQualityService {
     
     typealias Dependencies = HasNetworkDispatcher
     
-    //Cache
-    
-    
     let dependencies: Dependencies
     
     init(dependencies: Dependencies) {

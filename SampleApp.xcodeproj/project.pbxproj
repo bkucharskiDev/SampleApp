@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		822A00B020925F8E001DD101 /* HasImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00AF20925F8E001DD101 /* HasImageProvider.swift */; };
 		822A00B220926004001DD101 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00B120926004001DD101 /* Result.swift */; };
 		822A00B4209261F9001DD101 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00B3209261F9001DD101 /* AppDependency.swift */; };
-		822A00B920926DBD001DD101 /* ImageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00B820926DBD001DD101 /* ImageVM.swift */; };
-		822A00BD20926F79001DD101 /* ImageVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00BC20926F79001DD101 /* ImageVMTests.swift */; };
 		828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFB97209252BA00EDE038 /* AppDelegate.swift */; };
 		828CFB9A209252BA00EDE038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFB99209252BA00EDE038 /* ViewController.swift */; };
 		828CFB9D209252BA00EDE038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828CFB9B209252BA00EDE038 /* Main.storyboard */; };
@@ -46,11 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		822A00AF20925F8E001DD101 /* HasImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasImageProvider.swift; sourceTree = "<group>"; };
 		822A00B120926004001DD101 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		822A00B3209261F9001DD101 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
-		822A00B820926DBD001DD101 /* ImageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVM.swift; sourceTree = "<group>"; };
-		822A00BC20926F79001DD101 /* ImageVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVMTests.swift; sourceTree = "<group>"; };
 		828CFB94209252BA00EDE038 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828CFB97209252BA00EDE038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828CFB99209252BA00EDE038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				82CA799720973E9000CED1C6 /* Network */,
-				822A00AF20925F8E001DD101 /* HasImageProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -110,17 +103,8 @@
 			children = (
 				82CA798E2095268100CED1C6 /* New Group */,
 				82CA798320950C4A00CED1C6 /* Loading */,
-				822A00B620926AD5001DD101 /* Image */,
 			);
 			path = ApplicationControllers;
-			sourceTree = "<group>";
-		};
-		822A00B620926AD5001DD101 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				822A00B820926DBD001DD101 /* ImageVM.swift */,
-			);
-			path = Image;
 			sourceTree = "<group>";
 		};
 		828CFB8B209252BA00EDE038 = {
@@ -165,7 +149,6 @@
 			children = (
 				828CFBAC209252BA00EDE038 /* SampleAppTests.swift */,
 				828CFBAE209252BA00EDE038 /* Info.plist */,
-				822A00BC20926F79001DD101 /* ImageVMTests.swift */,
 			);
 			path = SampleAppTests;
 			sourceTree = "<group>";
@@ -371,12 +354,10 @@
 				82CA799D20974FB300CED1C6 /* AirQualityRequest.swift in Sources */,
 				82CA79A2209756FD00CED1C6 /* URLRequestConvertible.swift in Sources */,
 				82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */,
-				822A00B020925F8E001DD101 /* HasImageProvider.swift in Sources */,
 				828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */,
 				82CA79AA2097773400CED1C6 /* HasNetworkDispatcher.swift in Sources */,
 				82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */,
 				82CA799B20974E1400CED1C6 /* HTTPMethod.swift in Sources */,
-				822A00B920926DBD001DD101 /* ImageVM.swift in Sources */,
 				82CA798A2095194200CED1C6 /* UIView+Constraints.swift in Sources */,
 				822A00B4209261F9001DD101 /* AppDependency.swift in Sources */,
 				82CA799520973DB500CED1C6 /* Request.swift in Sources */,
@@ -391,7 +372,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				822A00BD20926F79001DD101 /* ImageVMTests.swift in Sources */,
 				828CFBAD209252BA00EDE038 /* SampleAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

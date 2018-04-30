@@ -11,15 +11,7 @@ import UIKit
 
 final class AppDependency: AppDependencies {
     
-    lazy var imageProvider: ImageProviderProtocol = {
-        return ImageProvider()
+    lazy var networkDispatcher: Dispatcher = {
+        return NetworkDispatcher()
     }()
-}
-
-
-final class ImageProvider: ImageProviderProtocol {
-    
-    func getImage(url: URL, completion: ((Result<UIImage>) -> Void)) {
-        completion(.failure(nil))
-    }
 }

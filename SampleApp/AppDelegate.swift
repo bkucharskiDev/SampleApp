@@ -9,7 +9,7 @@
 import UIKit
 
 /// All project dependencies
-typealias AppDependencies = HasImageProvider
+typealias AppDependencies = HasNetworkDispatcher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
