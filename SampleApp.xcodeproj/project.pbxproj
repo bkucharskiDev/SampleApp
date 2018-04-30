@@ -20,8 +20,11 @@
 		828CFBAD209252BA00EDE038 /* SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBAC209252BA00EDE038 /* SampleAppTests.swift */; };
 		828CFBB9209253FF00EDE038 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBB8209253FF00EDE038 /* RootCoordinator.swift */; };
 		828CFBBC2092546100EDE038 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBBB2092546100EDE038 /* Coordinator.swift */; };
-		82CA798520950C7300CED1C6 /* CircleProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798420950C7300CED1C6 /* CircleProgressViewController.swift */; };
+		82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798420950C7300CED1C6 /* LoadingVC.swift */; };
 		82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798620950D6600CED1C6 /* CircleProgressView.swift */; };
+		82CA798A2095194200CED1C6 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79892095194200CED1C6 /* UIView+Constraints.swift */; };
+		82CA798D20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798C20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift */; };
+		82CA79922095287E00CED1C6 /* LoadingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79912095287E00CED1C6 /* LoadingProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +55,11 @@
 		828CFBAE209252BA00EDE038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828CFBB8209253FF00EDE038 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		828CFBBB2092546100EDE038 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		82CA798420950C7300CED1C6 /* CircleProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressViewController.swift; sourceTree = "<group>"; };
+		82CA798420950C7300CED1C6 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		82CA798620950D6600CED1C6 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		82CA79892095194200CED1C6 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		82CA798C20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationsLoaderVM.swift; sourceTree = "<group>"; };
+		82CA79912095287E00CED1C6 /* LoadingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +91,8 @@
 		822A00B520926AC0001DD101 /* ApplicationControllers */ = {
 			isa = PBXGroup;
 			children = (
-				82CA79882095120600CED1C6 /* Extensions */,
-				82CA798320950C4A00CED1C6 /* CircleProgress */,
+				82CA798E2095268100CED1C6 /* New Group */,
+				82CA798320950C4A00CED1C6 /* Loading */,
 				822A00B620926AD5001DD101 /* Image */,
 			);
 			path = ApplicationControllers;
@@ -121,6 +127,7 @@
 		828CFB96209252BA00EDE038 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				82CA79882095120600CED1C6 /* Extensions */,
 				822A00B520926AC0001DD101 /* ApplicationControllers */,
 				828CFBBA2092545600EDE038 /* Protocols */,
 				828CFBB7209253E600EDE038 /* Coordinators */,
@@ -163,20 +170,38 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		82CA798320950C4A00CED1C6 /* CircleProgress */ = {
+		82CA798320950C4A00CED1C6 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
-				82CA798420950C7300CED1C6 /* CircleProgressViewController.swift */,
+				82CA798F2095281600CED1C6 /* ViewModels */,
+				82CA798420950C7300CED1C6 /* LoadingVC.swift */,
 				82CA798620950D6600CED1C6 /* CircleProgressView.swift */,
+				82CA79912095287E00CED1C6 /* LoadingProtocols.swift */,
 			);
-			path = CircleProgress;
+			path = Loading;
 			sourceTree = "<group>";
 		};
 		82CA79882095120600CED1C6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				82CA79892095194200CED1C6 /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		82CA798E2095268100CED1C6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		82CA798F2095281600CED1C6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				82CA798C20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,12 +311,15 @@
 				828CFBBC2092546100EDE038 /* Coordinator.swift in Sources */,
 				828CFB9A209252BA00EDE038 /* ViewController.swift in Sources */,
 				828CFBB9209253FF00EDE038 /* RootCoordinator.swift in Sources */,
-				82CA798520950C7300CED1C6 /* CircleProgressViewController.swift in Sources */,
+				82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */,
 				822A00B020925F8E001DD101 /* HasImageProvider.swift in Sources */,
 				828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */,
 				82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */,
 				822A00B920926DBD001DD101 /* ImageVM.swift in Sources */,
+				82CA798A2095194200CED1C6 /* UIView+Constraints.swift in Sources */,
 				822A00B4209261F9001DD101 /* AppDependency.swift in Sources */,
+				82CA798D20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift in Sources */,
+				82CA79922095287E00CED1C6 /* LoadingProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
