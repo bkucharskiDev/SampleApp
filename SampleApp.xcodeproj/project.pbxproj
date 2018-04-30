@@ -25,6 +25,14 @@
 		82CA798A2095194200CED1C6 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79892095194200CED1C6 /* UIView+Constraints.swift */; };
 		82CA798D20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798C20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift */; };
 		82CA79922095287E00CED1C6 /* LoadingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79912095287E00CED1C6 /* LoadingProtocols.swift */; };
+		82CA799520973DB500CED1C6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA799420973DB500CED1C6 /* Request.swift */; };
+		82CA799B20974E1400CED1C6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA799A20974E1400CED1C6 /* HTTPMethod.swift */; };
+		82CA799D20974FB300CED1C6 /* AirQualityRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA799C20974FB300CED1C6 /* AirQualityRequest.swift */; };
+		82CA79A2209756FD00CED1C6 /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A1209756FD00CED1C6 /* URLRequestConvertible.swift */; };
+		82CA79A42097684000CED1C6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A32097684000CED1C6 /* NetworkDispatcher.swift */; };
+		82CA79A62097761C00CED1C6 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A52097761C00CED1C6 /* Dispatcher.swift */; };
+		82CA79A8209776DA00CED1C6 /* AirQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A7209776DA00CED1C6 /* AirQualityService.swift */; };
+		82CA79AA2097773400CED1C6 /* HasNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A92097773400CED1C6 /* HasNetworkDispatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,14 @@
 		82CA79892095194200CED1C6 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		82CA798C20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationsLoaderVM.swift; sourceTree = "<group>"; };
 		82CA79912095287E00CED1C6 /* LoadingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProtocols.swift; sourceTree = "<group>"; };
+		82CA799420973DB500CED1C6 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		82CA799A20974E1400CED1C6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		82CA799C20974FB300CED1C6 /* AirQualityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityRequest.swift; sourceTree = "<group>"; };
+		82CA79A1209756FD00CED1C6 /* URLRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
+		82CA79A32097684000CED1C6 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		82CA79A52097761C00CED1C6 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		82CA79A7209776DA00CED1C6 /* AirQualityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityService.swift; sourceTree = "<group>"; };
+		82CA79A92097773400CED1C6 /* HasNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasNetworkDispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +99,7 @@
 		822A00AE20925F6C001DD101 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				82CA799720973E9000CED1C6 /* Network */,
 				822A00AF20925F8E001DD101 /* HasImageProvider.swift */,
 			);
 			path = Services;
@@ -164,6 +181,7 @@
 		828CFBBA2092545600EDE038 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				82CA799620973E5F00CED1C6 /* Networking */,
 				822A00AE20925F6C001DD101 /* Services */,
 				828CFBBB2092546100EDE038 /* Coordinator.swift */,
 			);
@@ -202,6 +220,44 @@
 				82CA798C20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		82CA799620973E5F00CED1C6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		82CA799720973E9000CED1C6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				82CA799920973EAA00CED1C6 /* Protocols */,
+				82CA799820973EA200CED1C6 /* Enums */,
+				82CA79A32097684000CED1C6 /* NetworkDispatcher.swift */,
+				82CA79A7209776DA00CED1C6 /* AirQualityService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		82CA799820973EA200CED1C6 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				82CA799A20974E1400CED1C6 /* HTTPMethod.swift */,
+				82CA799C20974FB300CED1C6 /* AirQualityRequest.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		82CA799920973EAA00CED1C6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				82CA799420973DB500CED1C6 /* Request.swift */,
+				82CA79A1209756FD00CED1C6 /* URLRequestConvertible.swift */,
+				82CA79A52097761C00CED1C6 /* Dispatcher.swift */,
+				82CA79A92097773400CED1C6 /* HasNetworkDispatcher.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,18 +363,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CA79A8209776DA00CED1C6 /* AirQualityService.swift in Sources */,
 				822A00B220926004001DD101 /* Result.swift in Sources */,
 				828CFBBC2092546100EDE038 /* Coordinator.swift in Sources */,
 				828CFB9A209252BA00EDE038 /* ViewController.swift in Sources */,
 				828CFBB9209253FF00EDE038 /* RootCoordinator.swift in Sources */,
+				82CA799D20974FB300CED1C6 /* AirQualityRequest.swift in Sources */,
+				82CA79A2209756FD00CED1C6 /* URLRequestConvertible.swift in Sources */,
 				82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */,
 				822A00B020925F8E001DD101 /* HasImageProvider.swift in Sources */,
 				828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */,
+				82CA79AA2097773400CED1C6 /* HasNetworkDispatcher.swift in Sources */,
 				82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */,
+				82CA799B20974E1400CED1C6 /* HTTPMethod.swift in Sources */,
 				822A00B920926DBD001DD101 /* ImageVM.swift in Sources */,
 				82CA798A2095194200CED1C6 /* UIView+Constraints.swift in Sources */,
 				822A00B4209261F9001DD101 /* AppDependency.swift in Sources */,
+				82CA799520973DB500CED1C6 /* Request.swift in Sources */,
+				82CA79A42097684000CED1C6 /* NetworkDispatcher.swift in Sources */,
 				82CA798D20951D9700CED1C6 /* MeasurementStationsLoaderVM.swift in Sources */,
+				82CA79A62097761C00CED1C6 /* Dispatcher.swift in Sources */,
 				82CA79922095287E00CED1C6 /* LoadingProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
