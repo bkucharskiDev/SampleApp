@@ -11,7 +11,15 @@ import UIKit
 
 final class AppDependency: AppDependencies {
     
-    lazy var networkDispatcher: Dispatcher = {
+    // Public
+    
+    lazy var airQualityService: AirQualityServiceProtocol = {
+        AirQualityService(networkDispatcher: networkDispatcher)
+    }()
+    
+    // Private
+    
+    private lazy var networkDispatcher: Dispatcher = {
         return NetworkDispatcher()
     }()
 }

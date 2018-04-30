@@ -8,37 +8,57 @@
 
 import Foundation
 
-final class AirQualityService {
+final class AirQualityService: AirQualityServiceProtocol {
     
     typealias Dependencies = HasNetworkDispatcher
     
-    let dependencies: Dependencies
+    private let networkDispatcher: Dispatcher
     
-    init(dependencies: Dependencies) {
-        self.dependencies = dependencies
+    init(networkDispatcher: Dispatcher) {
+        self.networkDispatcher = networkDispatcher
     }
     
-    func getAllStations(completion: @escaping ((Result<Data>) -> Void)) {
+    func getAllStations(completion: @escaping ((Result<[MeasurementStation]>) -> Void)) {
         let urlRequest = AirQualityRequest.allStations.asURLRequest()
         
-        dependencies.networkDispatcher.execute(urlRequest: urlRequest) { (result) in
-            completion(result)
-        }
+        executeAndDecode(urlRequest: urlRequest, completion: completion)
     }
     
     func getStationSensors(stationId: Int ,completion: @escaping ((Result<Data>) -> Void)) {
         let urlRequest = AirQualityRequest.stationSensors(stationId).asURLRequest()
         
-        dependencies.networkDispatcher.execute(urlRequest: urlRequest) { (result) in
-            completion(result)
-        }
+        executeAndDecode(urlRequest: urlRequest, completion: completion)
     }
     
     func getSensorData(sensorId: Int, completion: @escaping ((Result<Data>) -> Void)) {
         let urlRequest = AirQualityRequest.sensorData(sensorId).asURLRequest()
         
-        dependencies.networkDispatcher.execute(urlRequest: urlRequest) { (result) in
-            completion(result)
+        executeAndDecode(urlRequest: urlRequest, completion: completion)
+    }
+    
+    //MARK: Helpers
+    private func executeAndDecode<T: Decodable>(urlRequest: URLRequest, completion: @escaping ((Result<T>) -> Void)) {
+        
+        networkDispatcher.execute(urlRequest: urlRequest) { response in
+            
+            let result: Result<T>
+            
+            switch response {
+            case .success(let data):
+                do {
+                    let values = try JSONDecoder().decode(T.self, from: data)
+                    result = .success(values)
+                } catch {
+                    result = .failure(error)
+                }
+            case .failure(let error):
+                result = .failure(error)
+            }
+            
+            DispatchQueue.main.async {
+                completion(result)
+            }
         }
     }
+    
 }

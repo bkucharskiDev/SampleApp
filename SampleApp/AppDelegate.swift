@@ -9,7 +9,7 @@
 import UIKit
 
 /// All project dependencies
-typealias AppDependencies = HasNetworkDispatcher
+typealias AppDependencies = HasAirQualityService
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     lazy var appDependencies: AppDependencies = {
-        let appDependencies = AppDependency()
-        return appDependencies
+        return AppDependency()
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
