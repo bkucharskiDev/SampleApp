@@ -111,7 +111,6 @@
 		822A00B520926AC0001DD101 /* ApplicationControllers */ = {
 			isa = PBXGroup;
 			children = (
-				82CA798E2095268100CED1C6 /* New Group */,
 				82CA798320950C4A00CED1C6 /* Loading */,
 			);
 			path = ApplicationControllers;
@@ -139,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				828CFB97209252BA00EDE038 /* AppDelegate.swift */,
+				822A00B3209261F9001DD101 /* AppDependency.swift */,
 				82CA79882095120600CED1C6 /* Extensions */,
 				822A00B520926AC0001DD101 /* ApplicationControllers */,
 				828CFBBA2092545600EDE038 /* Protocols */,
@@ -149,7 +149,6 @@
 				828CFB9E209252BA00EDE038 /* Assets.xcassets */,
 				828CFBA0209252BA00EDE038 /* LaunchScreen.storyboard */,
 				828CFBA3209252BA00EDE038 /* Info.plist */,
-				822A00B3209261F9001DD101 /* AppDependency.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -198,13 +197,6 @@
 				82CA79892095194200CED1C6 /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		82CA798E2095268100CED1C6 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		82CA798F2095281600CED1C6 /* ViewModels */ = {

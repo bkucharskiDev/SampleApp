@@ -31,6 +31,8 @@ final class LoadingVC: UIViewController {
         super.viewDidLoad()
 
         setup()
+        
+        viewModel.loadResources()
     }
     
     private func setup() {
@@ -57,7 +59,7 @@ extension LoadingVC {
         circleProgressView.translatesAutoresizingMaskIntoConstraints = false
         circleProgressView.pinToCenter(view: view)
         circleProgressView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
-        circleProgressView.heightAnchor.constraint(equalTo: circleProgressView.heightAnchor).isActive = true
+        circleProgressView.heightAnchor.constraint(equalTo: circleProgressView.widthAnchor).isActive = true
     }
 }
 

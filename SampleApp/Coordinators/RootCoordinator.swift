@@ -22,6 +22,12 @@ final class RootCoordinator: Coordinator {
     }
     
     func start() {
-        window.rootViewController = ViewController()
+        showLoadingVC()
+    }
+    
+    private func showLoadingVC() {
+        let viewModel = MeasurementStationsLoaderVM(dependencies: appDependencies)
+        let vc = LoadingVC(viewModel: viewModel)
+        window.rootViewController = vc
     }
 }

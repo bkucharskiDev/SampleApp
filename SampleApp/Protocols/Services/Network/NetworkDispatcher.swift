@@ -8,16 +8,15 @@
 
 import Foundation
 
-final class NetworkDispatcher: Dispatcher {
+final class NetworkDispatcher: NSObject, Dispatcher {
     
     private lazy var defaultUrlSession = URLSession(configuration: .default)
     
     private let dispatchQueue = DispatchQueue(label: "NetworkDispatcher")
     
     func execute(urlRequest: URLRequest, completion: @escaping ((Result<Data>) -> Void)) {
-        let dataTask = URLSessionDataTask()
         
-        defaultUrlSession.dataTask(with: urlRequest) { (data, response, error) in
+        let dataTask = defaultUrlSession.dataTask(with: urlRequest) { (data, response, error) in
             
             if let error = error {
                 completion(.failure(error))
@@ -27,9 +26,15 @@ final class NetworkDispatcher: Dispatcher {
             }
         }
         
+        defaultUrlSession.delegate
+        
         dispatchQueue.async {
             dataTask.resume()
         }
     }
 }
 
+// MARK: - URLSessionDelegate
+extension NetworkDispatcher: URLSessionDelegate {
+    
+}
