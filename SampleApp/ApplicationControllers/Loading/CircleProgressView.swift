@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CircleProgressView: UIView {
+final class CircleProgressView: UIView {
     
     var progress: CGFloat = 0.0 {
         didSet {

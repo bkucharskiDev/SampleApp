@@ -27,7 +27,15 @@ final class RootCoordinator: Coordinator {
     
     private func showLoadingVC() {
         let viewModel = MeasurementStationsLoaderVM(dependencies: appDependencies)
+        viewModel.handleLoadingSuccess = {
+            let vm = MeasurementStationsListVM(dependencies: self.appDependencies)
+            let vc = ListTableVC.init(viewModel: vm)
+            
+            self.window.rootViewController = vc
+        }
+        
         let vc = LoadingVC(viewModel: viewModel)
+        
         window.rootViewController = vc
     }
 }

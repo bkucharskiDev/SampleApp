@@ -10,7 +10,8 @@ import Foundation
 
 protocol AirQualityServiceProtocol {
     
-    func getAllStations(completion: @escaping ((Result<[MeasurementStation]>) -> Void))
+    func downloadAllStations(completion: @escaping ((Result<Void>) -> Void))
+    func getAllStations() -> [MeasurementStation]
     func getStationSensors(stationId: Int ,completion: @escaping ((Result<[Sensor]>) -> Void))
     func getSensorData(sensorId: Int, completion: @escaping ((Result<SensorData>) -> Void))
 }

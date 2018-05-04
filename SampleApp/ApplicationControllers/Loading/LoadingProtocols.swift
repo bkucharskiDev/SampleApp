@@ -13,9 +13,6 @@ protocol LoadingVMProtocol: class {
     
     weak var delegate: LoadingVMDelegate? { get set }
     
-    var handleLoadingSuccess: (() -> Void)? { get set }
-    var handleLoadingFailure: (() -> Void)? { get set }
-    
     func loadResources()
 }
 

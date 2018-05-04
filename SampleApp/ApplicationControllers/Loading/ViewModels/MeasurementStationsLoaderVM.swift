@@ -17,22 +17,22 @@ final class MeasurementStationsLoaderVM: LoadingVMProtocol {
     let dependencies: Dependencies
     
     var handleLoadingSuccess: (() -> Void)?
-    var handleLoadingFailure: (() -> Void)?
+    var handleLoadingFailure: ((Error?) -> Void)?
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
     }
     
     func loadResources() {
-        dependencies.airQualityService.getAllStations { [weak self] (result) in
+        dependencies.airQualityService.downloadAllStations { [weak self] (result) in
             switch result {
-            case .success(let stations):
-                print(stations)
-                self?.handleLoadingSuccess?()
-                self?.delegate?.didUpdateProgress(0.75)
+            case .success:
+                self?.delegate?.didUpdateProgress(1.0)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                    self?.handleLoadingSuccess?()
+                })
             case .failure(let error):
-                print(error)
-                self?.handleLoadingFailure?()
+                self?.handleLoadingFailure?(error)
             }
         }
     }

@@ -26,15 +26,8 @@ final class NetworkDispatcher: NSObject, Dispatcher {
             }
         }
         
-        defaultUrlSession.delegate
-        
         dispatchQueue.async {
             dataTask.resume()
         }
     }
-}
-
-// MARK: - URLSessionDelegate
-extension NetworkDispatcher: URLSessionDelegate {
-    
 }
