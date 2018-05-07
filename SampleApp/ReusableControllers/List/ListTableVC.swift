@@ -12,7 +12,7 @@ final class ListTableVC: UITableViewController {
     
     private let viewModel: ListViewModelProtocol
     
-    private let cellId = "CellId"
+    private let cellId = "cellId"
     
     init(viewModel: ListViewModelProtocol) {
         self.viewModel = viewModel

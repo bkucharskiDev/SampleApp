@@ -27,15 +27,23 @@ final class RootCoordinator: Coordinator {
     
     private func showLoadingVC() {
         let viewModel = MeasurementStationsLoaderVM(dependencies: appDependencies)
-        viewModel.handleLoadingSuccess = {
-            let vm = MeasurementStationsListVM(dependencies: self.appDependencies)
-            let vc = ListTableVC.init(viewModel: vm)
-            
-            self.window.rootViewController = vc
+        viewModel.handleLoadingSuccess = { [weak self] in
+            self?.showContent()
         }
         
         let vc = LoadingVC(viewModel: viewModel)
         
         window.rootViewController = vc
+    }
+}
+
+// MARK: - ContentCoordinator
+extension RootCoordinator {
+    
+    private func showContent() {
+        let contentCoordinator = HomeCoordinator(dependencies: appDependencies, window: window)
+        contentCoordinator.start()
+        
+        appendChildCoordinator(contentCoordinator)
     }
 }
