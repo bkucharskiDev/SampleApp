@@ -27,12 +27,23 @@ final class HomeCoordinator: Coordinator {
     
     private func showMeasurementStationsList() {
         let vm = MeasurementStationsListVM(dependencies: dependencies)
-        vm.handleSelect = { measurementStation in
+        vm.handleSelect = { [weak self] measurementStation in
             
+            guard let `self` = self else { return }
+            
+            let vm = MeasurementStationVM(dependencies: self.dependencies,
+                                          measurementStation: measurementStation)
+            let vc = MeasurementStationVC(viewModel: vm)
+            
+            guard let navigationController = self.window.rootViewController as? UINavigationController else {
+                assertionFailure("Root view controller is not UINavigationController")
+                return
+            }
+            
+            navigationController.pushViewController(vc, animated: true)
         }
         let vc = ListTableVC(viewModel: vm)
-        let navigationController = UINavigationController(rootViewController: vc)
         
-        window.rootViewController = navigationController
+        window.rootViewController = UINavigationController(rootViewController: vc)
     }
 }

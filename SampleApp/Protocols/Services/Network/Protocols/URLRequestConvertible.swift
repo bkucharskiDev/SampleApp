@@ -20,8 +20,7 @@ extension URLRequestConvertible where Self: Request {
             .appending(apiPath)
             .appending(path)
         
-        if
-            let parameters = parameters, parameters.count > 0 {
+        if let parameters = parameters, parameters.count > 0 {
             
             urlString.append("?")
             parameters.forEach {

@@ -12,12 +12,19 @@
 		827E765E20A0622D0091775B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E765D20A0622D0091775B /* HomeCoordinator.swift */; };
 		827E766220A065FD0091775B /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766120A065FD0091775B /* UITableView+Dequeue.swift */; };
 		827E766420A066300091775B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766320A066300091775B /* Identifiable.swift */; };
+		827E766920A072450091775B /* MeasurementStationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766720A072450091775B /* MeasurementStationVC.swift */; };
+		827E766A20A072450091775B /* MeasurementStationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827E766820A072450091775B /* MeasurementStationVC.xib */; };
 		828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFB97209252BA00EDE038 /* AppDelegate.swift */; };
 		828CFB9F209252BA00EDE038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828CFB9E209252BA00EDE038 /* Assets.xcassets */; };
 		828CFBA2209252BA00EDE038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828CFBA0209252BA00EDE038 /* LaunchScreen.storyboard */; };
 		828CFBAD209252BA00EDE038 /* SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBAC209252BA00EDE038 /* SampleAppTests.swift */; };
 		828CFBB9209253FF00EDE038 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBB8209253FF00EDE038 /* RootCoordinator.swift */; };
 		828CFBBC2092546100EDE038 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBBB2092546100EDE038 /* Coordinator.swift */; };
+		8298FF2420A07D6B0019DC4F /* MeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2220A07D6B0019DC4F /* MeasurementCell.swift */; };
+		8298FF2520A07D6B0019DC4F /* MeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8298FF2320A07D6B0019DC4F /* MeasurementCell.xib */; };
+		8298FF2720A082FD0019DC4F /* MeasurementStationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2620A082FD0019DC4F /* MeasurementStationVM.swift */; };
+		8298FF2B20A1DBED0019DC4F /* MeasurementCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */; };
+		8298FF2D20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */; };
 		82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798420950C7300CED1C6 /* LoadingVC.swift */; };
 		82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798620950D6600CED1C6 /* CircleProgressView.swift */; };
 		82CA798A2095194200CED1C6 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79892095194200CED1C6 /* UIView+Constraints.swift */; };
@@ -57,6 +64,8 @@
 		827E765D20A0622D0091775B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		827E766120A065FD0091775B /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
 		827E766320A066300091775B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		827E766720A072450091775B /* MeasurementStationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationVC.swift; sourceTree = "<group>"; };
+		827E766820A072450091775B /* MeasurementStationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementStationVC.xib; sourceTree = "<group>"; };
 		828CFB94209252BA00EDE038 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828CFB97209252BA00EDE038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828CFB9E209252BA00EDE038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +76,11 @@
 		828CFBAE209252BA00EDE038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828CFBB8209253FF00EDE038 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		828CFBBB2092546100EDE038 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8298FF2220A07D6B0019DC4F /* MeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCell.swift; sourceTree = "<group>"; };
+		8298FF2320A07D6B0019DC4F /* MeasurementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementCell.xib; sourceTree = "<group>"; };
+		8298FF2620A082FD0019DC4F /* MeasurementStationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationVM.swift; sourceTree = "<group>"; };
+		8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCellVM.swift; sourceTree = "<group>"; };
+		8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCellVMProtocol.swift; sourceTree = "<group>"; };
 		82CA798420950C7300CED1C6 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		82CA798620950D6600CED1C6 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		82CA79892095194200CED1C6 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
@@ -119,6 +133,7 @@
 		822A00B520926AC0001DD101 /* ApplicationControllers */ = {
 			isa = PBXGroup;
 			children = (
+				827E766620A071B90091775B /* MeasurementStation */,
 			);
 			path = ApplicationControllers;
 			sourceTree = "<group>";
@@ -130,6 +145,17 @@
 				82CB9CD4209CE24600B778E0 /* List */,
 			);
 			path = ReusableControllers;
+			sourceTree = "<group>";
+		};
+		827E766620A071B90091775B /* MeasurementStation */ = {
+			isa = PBXGroup;
+			children = (
+				8298FF2120A07B4C0019DC4F /* Views */,
+				827E766720A072450091775B /* MeasurementStationVC.swift */,
+				827E766820A072450091775B /* MeasurementStationVC.xib */,
+				8298FF2620A082FD0019DC4F /* MeasurementStationVM.swift */,
+			);
+			path = MeasurementStation;
 			sourceTree = "<group>";
 		};
 		828CFB8B209252BA00EDE038 = {
@@ -195,6 +221,17 @@
 				827E766320A066300091775B /* Identifiable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8298FF2120A07B4C0019DC4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8298FF2220A07D6B0019DC4F /* MeasurementCell.swift */,
+				8298FF2320A07D6B0019DC4F /* MeasurementCell.xib */,
+				8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */,
+				8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		82CA798320950C4A00CED1C6 /* Loading */ = {
@@ -378,6 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				828CFBA2209252BA00EDE038 /* LaunchScreen.storyboard in Resources */,
+				827E766A20A072450091775B /* MeasurementStationVC.xib in Resources */,
+				8298FF2520A07D6B0019DC4F /* MeasurementCell.xib in Resources */,
 				828CFB9F209252BA00EDE038 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8298FF2720A082FD0019DC4F /* MeasurementStationVM.swift in Sources */,
 				82CA79A8209776DA00CED1C6 /* AirQualityService.swift in Sources */,
 				822A00B220926004001DD101 /* Result.swift in Sources */,
 				82CA79B6209786E500CED1C6 /* AirQualityServiceProtocol.swift in Sources */,
@@ -409,11 +449,15 @@
 				82CA79B32097868A00CED1C6 /* HasAirQualityService.swift in Sources */,
 				82CA79A2209756FD00CED1C6 /* URLRequestConvertible.swift in Sources */,
 				827E766420A066300091775B /* Identifiable.swift in Sources */,
+				8298FF2420A07D6B0019DC4F /* MeasurementCell.swift in Sources */,
+				8298FF2D20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift in Sources */,
 				82CA79B12097813100CED1C6 /* SensorData.swift in Sources */,
+				827E766920A072450091775B /* MeasurementStationVC.swift in Sources */,
 				82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */,
 				828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */,
 				82CB9CD8209CE44900B778E0 /* ListTableVC.swift in Sources */,
 				82CA79AA2097773400CED1C6 /* HasNetworkDispatcher.swift in Sources */,
+				8298FF2B20A1DBED0019DC4F /* MeasurementCellVM.swift in Sources */,
 				82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */,
 				82CA799B20974E1400CED1C6 /* HTTPMethod.swift in Sources */,
 				82CA798A2095194200CED1C6 /* UIView+Constraints.swift in Sources */,

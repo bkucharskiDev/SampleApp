@@ -15,6 +15,6 @@ struct SensorData: Codable {
     
     struct Value: Codable {
         let date: String
-        let value: Double
+        let value: Double?
     }
 }
