@@ -8,9 +8,6 @@
 
 import UIKit
 
-/// All project dependencies
-typealias AppDependencies = HasAirQualityService
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -25,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     lazy var appDependencies: AppDependencies = {
-        return AppDependency()
+        return AppDependency(window: window!)
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

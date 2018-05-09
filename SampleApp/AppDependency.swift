@@ -9,15 +9,28 @@
 import Foundation
 import UIKit
 
+/// All project dependencies
+typealias AppDependencies = HasAirQualityService & HasAlertsController
+
 final class AppDependency: AppDependencies {
     
-    // Public
+    private let window: UIWindow
+    
+    init(window: UIWindow) {
+        self.window = window
+    }
+    
+    // Public dependencies
+    
+    lazy var alertsController: AlertsControllerProtocol = {
+       return AlertsController(window: window)
+    }()
     
     lazy var airQualityService: AirQualityServiceProtocol = {
         AirQualityService(networkDispatcher: networkDispatcher)
     }()
     
-    // Private
+    // Private dependencies
     
     private lazy var networkDispatcher: Dispatcher = {
         return NetworkDispatcher()

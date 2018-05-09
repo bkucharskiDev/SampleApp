@@ -27,12 +27,23 @@ final class HomeCoordinator: Coordinator {
     
     private func showMeasurementStationsList() {
         let vm = MeasurementStationsListVM(dependencies: dependencies)
+        
         vm.handleSelect = { [weak self] measurementStation in
             
             guard let `self` = self else { return }
             
             let vm = MeasurementStationVM(dependencies: self.dependencies,
                                           measurementStation: measurementStation)
+            
+            vm.handleDownloadFailure = { [weak self] error in
+                let alertActionHandler = {
+                    vm.getData()
+                }
+                let alertAction = AlertAction(title: "Try again", actionHandler: alertActionHandler)
+                let cancelAlertAction = AlertAction(title: "Cancel", actionHandler: nil)
+                self?.dependencies.alertsController.showNetworkErrorAlert(error: error, actions: [alertAction, cancelAlertAction])
+            }
+            
             let vc = MeasurementStationVC(viewModel: vm)
             
             guard let navigationController = self.window.rootViewController as? UINavigationController else {

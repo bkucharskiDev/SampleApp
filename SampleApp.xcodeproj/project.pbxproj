@@ -25,6 +25,9 @@
 		8298FF2720A082FD0019DC4F /* MeasurementStationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2620A082FD0019DC4F /* MeasurementStationVM.swift */; };
 		8298FF2B20A1DBED0019DC4F /* MeasurementCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */; };
 		8298FF2D20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */; };
+		8298FF3120A314830019DC4F /* AlertsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF3020A314830019DC4F /* AlertsController.swift */; };
+		8298FF3320A31A870019DC4F /* HasAlertsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF3220A31A870019DC4F /* HasAlertsController.swift */; };
+		8298FF3520A31AC60019DC4F /* AlertsControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF3420A31AC60019DC4F /* AlertsControllerProtocol.swift */; };
 		82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798420950C7300CED1C6 /* LoadingVC.swift */; };
 		82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798620950D6600CED1C6 /* CircleProgressView.swift */; };
 		82CA798A2095194200CED1C6 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79892095194200CED1C6 /* UIView+Constraints.swift */; };
@@ -81,6 +84,9 @@
 		8298FF2620A082FD0019DC4F /* MeasurementStationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationVM.swift; sourceTree = "<group>"; };
 		8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCellVM.swift; sourceTree = "<group>"; };
 		8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCellVMProtocol.swift; sourceTree = "<group>"; };
+		8298FF3020A314830019DC4F /* AlertsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsController.swift; sourceTree = "<group>"; };
+		8298FF3220A31A870019DC4F /* HasAlertsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasAlertsController.swift; sourceTree = "<group>"; };
+		8298FF3420A31AC60019DC4F /* AlertsControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsControllerProtocol.swift; sourceTree = "<group>"; };
 		82CA798420950C7300CED1C6 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		82CA798620950D6600CED1C6 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		82CA79892095194200CED1C6 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				82CA799720973E9000CED1C6 /* Network */,
+				8298FF2F20A314680019DC4F /* Alerts */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -242,6 +249,15 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		8298FF2F20A314680019DC4F /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				8298FF3420A31AC60019DC4F /* AlertsControllerProtocol.swift */,
+				8298FF3020A314830019DC4F /* AlertsController.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		82CA798320950C4A00CED1C6 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +333,7 @@
 			children = (
 				82CA79A92097773400CED1C6 /* HasNetworkDispatcher.swift */,
 				82CA79B22097868A00CED1C6 /* HasAirQualityService.swift */,
+				8298FF3220A31A870019DC4F /* HasAlertsController.swift */,
 			);
 			path = AppDependencies;
 			sourceTree = "<group>";
@@ -449,7 +466,9 @@
 				82CA79B6209786E500CED1C6 /* AirQualityServiceProtocol.swift in Sources */,
 				828CFBBC2092546100EDE038 /* Coordinator.swift in Sources */,
 				827E766220A065FD0091775B /* UITableView+Dequeue.swift in Sources */,
+				8298FF3520A31AC60019DC4F /* AlertsControllerProtocol.swift in Sources */,
 				827E765E20A0622D0091775B /* HomeCoordinator.swift in Sources */,
+				8298FF3120A314830019DC4F /* AlertsController.swift in Sources */,
 				828CFBB9209253FF00EDE038 /* RootCoordinator.swift in Sources */,
 				82CA799D20974FB300CED1C6 /* AirQualityRequest.swift in Sources */,
 				82CB9CDD209CE79100B778E0 /* MeasurementStationsListVM.swift in Sources */,
@@ -465,6 +484,7 @@
 				828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */,
 				82CB9CD8209CE44900B778E0 /* ListTableVC.swift in Sources */,
 				82CA79AA2097773400CED1C6 /* HasNetworkDispatcher.swift in Sources */,
+				8298FF3320A31A870019DC4F /* HasAlertsController.swift in Sources */,
 				8298FF2B20A1DBED0019DC4F /* MeasurementCellVM.swift in Sources */,
 				82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */,
 				82CA799B20974E1400CED1C6 /* HTTPMethod.swift in Sources */,

@@ -31,6 +31,16 @@ final class RootCoordinator: Coordinator {
             self?.showContent()
         }
         
+        viewModel.handleLoadingFailure = { [weak self] error in
+            viewModel.setProgressToZero()
+            
+            let alertActionHandler = {
+                viewModel.loadResources()
+            }
+            let alertAction = AlertAction(title: "Try again", actionHandler: alertActionHandler)
+            self?.appDependencies.alertsController.showNetworkErrorAlert(error: error, actions: [alertAction])
+        }
+        
         let vc = LoadingVC(viewModel: viewModel)
         
         window.rootViewController = vc
