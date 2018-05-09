@@ -181,12 +181,13 @@
 			children = (
 				828CFB97209252BA00EDE038 /* AppDelegate.swift */,
 				822A00B3209261F9001DD101 /* AppDependency.swift */,
-				82CA79882095120600CED1C6 /* Extensions */,
 				822A00B520926AC0001DD101 /* ApplicationControllers */,
 				827E766520A070F20091775B /* ReusableControllers */,
+				822A00AE20925F6C001DD101 /* Services */,
 				828CFBBA2092545600EDE038 /* Protocols */,
 				828CFBB7209253E600EDE038 /* Coordinators */,
-				822A00B120926004001DD101 /* Result.swift */,
+				82CA79882095120600CED1C6 /* Extensions */,
+				8298FF2E20A313E30019DC4F /* Enums */,
 				828CFB9E209252BA00EDE038 /* Assets.xcassets */,
 				828CFBA0209252BA00EDE038 /* LaunchScreen.storyboard */,
 				828CFBA3209252BA00EDE038 /* Info.plist */,
@@ -215,10 +216,9 @@
 		828CFBBA2092545600EDE038 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				82CA79B4209786AE00CED1C6 /* AppDependencies */,
-				822A00AE20925F6C001DD101 /* Services */,
 				828CFBBB2092546100EDE038 /* Coordinator.swift */,
 				827E766320A066300091775B /* Identifiable.swift */,
+				82CA79B4209786AE00CED1C6 /* AppDependencies */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -232,6 +232,14 @@
 				8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8298FF2E20A313E30019DC4F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				822A00B120926004001DD101 /* Result.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		82CA798320950C4A00CED1C6 /* Loading */ = {

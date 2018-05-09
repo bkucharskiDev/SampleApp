@@ -30,6 +30,12 @@ final class ListTableVC: UITableViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     private func setup() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     }

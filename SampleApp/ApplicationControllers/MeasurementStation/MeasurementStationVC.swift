@@ -33,8 +33,16 @@ class MeasurementStationVC: UIViewController, Identifiable {
     }
     
     private func setup() {
+        navigationController?.isNavigationBarHidden = false
+        
+        setupLabels()
         setupTableView()
         setupViewModel()
+    }
+    
+    private func setupLabels() {
+        cityLabel.text = viewModel.city
+        stationNameLabel.text = viewModel.stationName
     }
     
     private func setupViewModel() {

@@ -19,15 +19,23 @@ final class MeasurementStationVM {
     
     weak var delegate: MeasurementStationVMDelegate?
     
-    var numberOfRows: Int {
-        return cellViewModels.count
-    }
-    
     private let dependencies: Dependencies
     private let measurementStation: MeasurementStation
     private var cellViewModels: [MeasurementCellVM] = []
     private var sensors: [Sensor] = []
     private var sensorData: [SensorData] = []
+    
+    var numberOfRows: Int {
+        return cellViewModels.count
+    }
+    
+    var city: String {
+        return measurementStation.city.name
+    }
+    
+    var stationName: String {
+        return measurementStation.stationName
+    }
     
     var handleDownloadSuccess: (() -> Void)?
     var handleDownloadFailure: ((Error?) -> Void)?
@@ -40,6 +48,7 @@ final class MeasurementStationVM {
     func cellVM(at indexPath: IndexPath) -> MeasurementCellVM {
         return cellViewModels[indexPath.row]
     }
+    
     
     func getData() {
         dependencies.airQualityService.getStationSensors(stationId: measurementStation.id) { [weak self] (result) in
