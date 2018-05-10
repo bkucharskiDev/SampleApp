@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 typealias AlertAction = (title: String, actionHandler: (() -> Void)?)
 
 protocol AlertsControllerProtocol {
     
-    func showAlert(message: String?, actions: [AlertAction])
-    func showNetworkErrorAlert(error: Error?, actions: [AlertAction])
+    func showAlert(message: String?, actions: [AlertAction], inViewController vc: UIViewController)
+    func showNetworkErrorAlert(error: Error?, actions: [AlertAction], inViewController vc: UIViewController)
 }

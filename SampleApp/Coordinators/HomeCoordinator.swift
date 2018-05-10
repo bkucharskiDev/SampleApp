@@ -35,16 +35,16 @@ final class HomeCoordinator: Coordinator {
             let vm = MeasurementStationVM(dependencies: self.dependencies,
                                           measurementStation: measurementStation)
             
+            let vc = MeasurementStationVC(viewModel: vm)
+            
             vm.handleDownloadFailure = { [weak self] error in
                 let alertActionHandler = {
                     vm.getData()
                 }
                 let alertAction = AlertAction(title: "Try again", actionHandler: alertActionHandler)
                 let cancelAlertAction = AlertAction(title: "Cancel", actionHandler: nil)
-                self?.dependencies.alertsController.showNetworkErrorAlert(error: error, actions: [alertAction, cancelAlertAction])
+                self?.dependencies.alertsController.showNetworkErrorAlert(error: error, actions: [alertAction, cancelAlertAction], inViewController: vc)
             }
-            
-            let vc = MeasurementStationVC(viewModel: vm)
             
             guard let navigationController = self.window.rootViewController as? UINavigationController else {
                 assertionFailure("Root view controller is not UINavigationController")

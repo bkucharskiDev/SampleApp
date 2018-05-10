@@ -10,18 +10,12 @@ import UIKit
 
 final class AlertsController: AlertsControllerProtocol {
     
-    private let window: UIWindow
-    
-    init(window: UIWindow) {
-        self.window = window
+    func showNetworkErrorAlert(error: Error?, actions: [AlertAction], inViewController vc: UIViewController) {
+        showAlert(message: "Network error appeared.\n" +
+            (error?.localizedDescription ?? ""), actions: actions, inViewController: vc)
     }
     
-    func showNetworkErrorAlert(error: Error?, actions: [AlertAction]) {
-        showAlert(message: "Network error appeared \n" +
-            (error?.localizedDescription ?? ""), actions: actions)
-    }
-    
-    func showAlert(message: String?, actions: [AlertAction]) {
+    func showAlert(message: String?, actions: [AlertAction], inViewController vc: UIViewController) {
         
         var alertActions: [UIAlertAction] = []
         
@@ -42,6 +36,6 @@ final class AlertsController: AlertsControllerProtocol {
         
         alertActions.forEach { alertController.addAction($0) }
         
-        window.rootViewController?.present(alertController, animated: true, completion: nil)
+        vc.present(alertController, animated: true, completion: nil)
     }
 }

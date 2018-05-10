@@ -23,7 +23,7 @@ final class AppDependency: AppDependencies {
     // Public dependencies
     
     lazy var alertsController: AlertsControllerProtocol = {
-       return AlertsController(window: window)
+       return AlertsController()
     }()
     
     lazy var airQualityService: AirQualityServiceProtocol = {
