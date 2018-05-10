@@ -1,5 +1,5 @@
 //
-//  MeasurementStationsLoaderVM.swift
+//  MeasurementStationsLoadingVM.swift
 //  SampleApp
 //
 //  Created by Bartosz Kucharski on 28.04.2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class MeasurementStationsLoaderVM: LoadingVMProtocol {
+final class MeasurementStationsLoadingVM: LoadingVMProtocol {
     
     typealias Dependencies = HasAirQualityService
     
