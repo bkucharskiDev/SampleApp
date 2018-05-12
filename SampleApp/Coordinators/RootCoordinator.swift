@@ -40,10 +40,13 @@ final class RootCoordinator: Coordinator {
                 viewModel?.loadResources()
                 return
             }
-            let alertAction = AlertAction(title: "Try again", actionHandler: alertActionHandler)
+            
+            guard let vc = vc else { return }
+            
+            let alertAction = AlertAction(title: "Try again".localized, actionHandler: alertActionHandler)
             self?.appDependencies.alertsController.showNetworkErrorAlert(error: error,
                                                                          actions: [alertAction],
-                                                                         inViewController: vc!)
+                                                                         inViewController: vc)
         }
         
         window.rootViewController = vc

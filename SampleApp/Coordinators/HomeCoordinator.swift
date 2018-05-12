@@ -42,9 +42,12 @@ final class HomeCoordinator: Coordinator {
                     vm?.getData()
                     return
                 }
-                let alertAction = AlertAction(title: "Try again", actionHandler: alertActionHandler)
-                let cancelAlertAction = AlertAction(title: "Cancel", actionHandler: nil)
-                self?.dependencies.alertsController.showNetworkErrorAlert(error: error, actions: [alertAction, cancelAlertAction], inViewController: vc!)
+                let alertAction = AlertAction(title: "Try again".localized, actionHandler: alertActionHandler)
+                let cancelAlertAction = AlertAction(title: "Cancel".localized, actionHandler: nil)
+                
+                guard let vc = vc else { return }
+                
+                self?.dependencies.alertsController.showNetworkErrorAlert(error: error, actions: [alertAction, cancelAlertAction], inViewController: vc)
             }
             
             guard let navigationController = self.window.rootViewController as? UINavigationController else {

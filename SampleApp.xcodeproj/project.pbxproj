@@ -9,19 +9,20 @@
 /* Begin PBXBuildFile section */
 		822A00B220926004001DD101 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00B120926004001DD101 /* Result.swift */; };
 		822A00B4209261F9001DD101 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A00B3209261F9001DD101 /* AppDependency.swift */; };
+		82329D0720A7495D0057270B /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D0620A7495D0057270B /* String+Localization.swift */; };
+		82329D0C20A74B4B0057270B /* MeasurementStationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82329D0E20A74B4B0057270B /* MeasurementStationVC.xib */; };
+		82329D1220A74C300057270B /* MeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82329D1420A74C300057270B /* MeasurementCell.xib */; };
+		82329D2C20A74DD10057270B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82329D2E20A74DD10057270B /* Localizable.strings */; };
 		827E765E20A0622D0091775B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E765D20A0622D0091775B /* HomeCoordinator.swift */; };
 		827E766220A065FD0091775B /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766120A065FD0091775B /* UITableView+Dequeue.swift */; };
 		827E766420A066300091775B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766320A066300091775B /* Identifiable.swift */; };
 		827E766920A072450091775B /* MeasurementStationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766720A072450091775B /* MeasurementStationVC.swift */; };
-		827E766A20A072450091775B /* MeasurementStationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827E766820A072450091775B /* MeasurementStationVC.xib */; };
 		828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFB97209252BA00EDE038 /* AppDelegate.swift */; };
 		828CFB9F209252BA00EDE038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828CFB9E209252BA00EDE038 /* Assets.xcassets */; };
-		828CFBA2209252BA00EDE038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828CFBA0209252BA00EDE038 /* LaunchScreen.storyboard */; };
 		828CFBAD209252BA00EDE038 /* SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBAC209252BA00EDE038 /* SampleAppTests.swift */; };
 		828CFBB9209253FF00EDE038 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBB8209253FF00EDE038 /* RootCoordinator.swift */; };
 		828CFBBC2092546100EDE038 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828CFBBB2092546100EDE038 /* Coordinator.swift */; };
 		8298FF2420A07D6B0019DC4F /* MeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2220A07D6B0019DC4F /* MeasurementCell.swift */; };
-		8298FF2520A07D6B0019DC4F /* MeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8298FF2320A07D6B0019DC4F /* MeasurementCell.xib */; };
 		8298FF2720A082FD0019DC4F /* MeasurementStationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2620A082FD0019DC4F /* MeasurementStationVM.swift */; };
 		8298FF2B20A1DBED0019DC4F /* MeasurementCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */; };
 		8298FF2D20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */; };
@@ -64,15 +65,22 @@
 /* Begin PBXFileReference section */
 		822A00B120926004001DD101 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		822A00B3209261F9001DD101 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		82329D0620A7495D0057270B /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		82329D0F20A74B520057270B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MeasurementStationVC.xib; sourceTree = "<group>"; };
+		82329D1120A74B630057270B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MeasurementStationVC.strings; sourceTree = "<group>"; };
+		82329D1320A74C300057270B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MeasurementCell.xib; sourceTree = "<group>"; };
+		82329D1620A74C330057270B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MeasurementCell.strings; sourceTree = "<group>"; };
+		82329D1D20A74D1B0057270B /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/MeasurementCell.strings; sourceTree = "<group>"; };
+		82329D1E20A74D1B0057270B /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/MeasurementStationVC.strings; sourceTree = "<group>"; };
+		82329D2D20A74DD10057270B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		82329D2F20A74DD40057270B /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		827E765D20A0622D0091775B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		827E766120A065FD0091775B /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
 		827E766320A066300091775B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		827E766720A072450091775B /* MeasurementStationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationVC.swift; sourceTree = "<group>"; };
-		827E766820A072450091775B /* MeasurementStationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementStationVC.xib; sourceTree = "<group>"; };
 		828CFB94209252BA00EDE038 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828CFB97209252BA00EDE038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		828CFB9E209252BA00EDE038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		828CFBA1209252BA00EDE038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		828CFBA3209252BA00EDE038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828CFBA8209252BA00EDE038 /* SampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		828CFBAC209252BA00EDE038 /* SampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppTests.swift; sourceTree = "<group>"; };
@@ -80,7 +88,6 @@
 		828CFBB8209253FF00EDE038 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		828CFBBB2092546100EDE038 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8298FF2220A07D6B0019DC4F /* MeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCell.swift; sourceTree = "<group>"; };
-		8298FF2320A07D6B0019DC4F /* MeasurementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementCell.xib; sourceTree = "<group>"; };
 		8298FF2620A082FD0019DC4F /* MeasurementStationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationVM.swift; sourceTree = "<group>"; };
 		8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCellVM.swift; sourceTree = "<group>"; };
 		8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCellVMProtocol.swift; sourceTree = "<group>"; };
@@ -159,7 +166,7 @@
 			children = (
 				8298FF2120A07B4C0019DC4F /* Views */,
 				827E766720A072450091775B /* MeasurementStationVC.swift */,
-				827E766820A072450091775B /* MeasurementStationVC.xib */,
+				82329D0E20A74B4B0057270B /* MeasurementStationVC.xib */,
 				8298FF2620A082FD0019DC4F /* MeasurementStationVM.swift */,
 			);
 			path = MeasurementStation;
@@ -196,7 +203,7 @@
 				82CA79882095120600CED1C6 /* Extensions */,
 				8298FF2E20A313E30019DC4F /* Enums */,
 				828CFB9E209252BA00EDE038 /* Assets.xcassets */,
-				828CFBA0209252BA00EDE038 /* LaunchScreen.storyboard */,
+				82329D2E20A74DD10057270B /* Localizable.strings */,
 				828CFBA3209252BA00EDE038 /* Info.plist */,
 			);
 			path = SampleApp;
@@ -234,7 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				8298FF2220A07D6B0019DC4F /* MeasurementCell.swift */,
-				8298FF2320A07D6B0019DC4F /* MeasurementCell.xib */,
+				82329D1420A74C300057270B /* MeasurementCell.xib */,
 				8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */,
 				8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */,
 			);
@@ -274,6 +281,7 @@
 			children = (
 				82CA79892095194200CED1C6 /* UIView+Constraints.swift */,
 				827E766120A065FD0091775B /* UITableView+Dequeue.swift */,
+				82329D0620A7495D0057270B /* String+Localization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -422,6 +430,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 828CFB8B209252BA00EDE038;
 			productRefGroup = 828CFB95209252BA00EDE038 /* Products */;
@@ -439,9 +448,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				828CFBA2209252BA00EDE038 /* LaunchScreen.storyboard in Resources */,
-				827E766A20A072450091775B /* MeasurementStationVC.xib in Resources */,
-				8298FF2520A07D6B0019DC4F /* MeasurementCell.xib in Resources */,
+				82329D0C20A74B4B0057270B /* MeasurementStationVC.xib in Resources */,
+				82329D2C20A74DD10057270B /* Localizable.strings in Resources */,
+				82329D1220A74C300057270B /* MeasurementCell.xib in Resources */,
 				828CFB9F209252BA00EDE038 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +506,7 @@
 				82CA79A62097761C00CED1C6 /* Dispatcher.swift in Sources */,
 				82CA79922095287E00CED1C6 /* LoadingProtocols.swift in Sources */,
 				82CA79AD20977FCC00CED1C6 /* MeasurementStation.swift in Sources */,
+				82329D0720A7495D0057270B /* String+Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,12 +529,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		828CFBA0209252BA00EDE038 /* LaunchScreen.storyboard */ = {
+		82329D0E20A74B4B0057270B /* MeasurementStationVC.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				828CFBA1209252BA00EDE038 /* Base */,
+				82329D0F20A74B520057270B /* Base */,
+				82329D1120A74B630057270B /* en */,
+				82329D1E20A74D1B0057270B /* pl */,
 			);
-			name = LaunchScreen.storyboard;
+			name = MeasurementStationVC.xib;
+			sourceTree = "<group>";
+		};
+		82329D1420A74C300057270B /* MeasurementCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82329D1320A74C300057270B /* Base */,
+				82329D1620A74C330057270B /* en */,
+				82329D1D20A74D1B0057270B /* pl */,
+			);
+			name = MeasurementCell.xib;
+			sourceTree = "<group>";
+		};
+		82329D2E20A74DD10057270B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82329D2D20A74DD10057270B /* en */,
+				82329D2F20A74DD40057270B /* pl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -534,6 +565,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -591,6 +623,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

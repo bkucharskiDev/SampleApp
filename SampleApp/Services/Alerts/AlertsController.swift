@@ -11,7 +11,7 @@ import UIKit
 final class AlertsController: AlertsControllerProtocol {
     
     func showNetworkErrorAlert(error: Error?, actions: [AlertAction], inViewController vc: UIViewController) {
-        showAlert(message: "Network error appeared.\n" +
+        showAlert(message: "Network error appeared.".localized + "\n" +
             (error?.localizedDescription ?? ""), actions: actions, inViewController: vc)
     }
     
@@ -21,11 +21,11 @@ final class AlertsController: AlertsControllerProtocol {
         
         // In case there isn't any action
         if actions.isEmpty {
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            let defaultAction = UIAlertAction(title: "OK".localized, style: .cancel, handler: nil)
             alertActions.append(defaultAction)
         }
         
-        let alertController = UIAlertController(title: "Ooops!", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Ooops!".localized, message: message, preferredStyle: .alert)
         actions.forEach { alertAction in
             
             let action = UIAlertAction(title: alertAction.title, style: .default, handler: { _ in

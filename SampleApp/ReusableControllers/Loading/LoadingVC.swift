@@ -58,7 +58,7 @@ extension LoadingVC {
     private func setupLoadingDataLabel() {
         loadingDataLabel = UILabel()
         loadingDataLabel.textColor = .white
-        loadingDataLabel.text = "Loading data..."
+        loadingDataLabel.text = "Loading data...".localized
         
         view.addSubview(loadingDataLabel)
     }

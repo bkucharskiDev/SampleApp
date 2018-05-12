@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  SampleApp
+
+  Created by Bartosz Kucharski on 12.05.2018.
+  Copyright © 2018 Bartosz Kucharski. All rights reserved.
+*/
+
+"Loading data..." = "Loading data...";
+"OK" = "OK";
+"Ooops!" = "Ooops!";
+"Try again" = "Try again";
+"Cancel" = "Cancel";
+"Network error appeared." = "Network error appeared.";
