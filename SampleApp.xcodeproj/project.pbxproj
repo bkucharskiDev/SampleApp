@@ -13,6 +13,10 @@
 		82329D0C20A74B4B0057270B /* MeasurementStationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82329D0E20A74B4B0057270B /* MeasurementStationVC.xib */; };
 		82329D1220A74C300057270B /* MeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82329D1420A74C300057270B /* MeasurementCell.xib */; };
 		82329D2C20A74DD10057270B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82329D2E20A74DD10057270B /* Localizable.strings */; };
+		82329D3220A97E300057270B /* MeasurementStationsListVMTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D3120A97E300057270B /* MeasurementStationsListVMTest.swift */; };
+		82329D3520A97EDA0057270B /* MockedAirQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D3420A97EDA0057270B /* MockedAirQualityService.swift */; };
+		82329D3720A98BFE0057270B /* MeasurementStationVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D3620A98BFE0057270B /* MeasurementStationVMTests.swift */; };
+		82329D3920A990840057270B /* MeasurementStationsLoadingVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D3820A990840057270B /* MeasurementStationsLoadingVMTests.swift */; };
 		827E765E20A0622D0091775B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E765D20A0622D0091775B /* HomeCoordinator.swift */; };
 		827E766220A065FD0091775B /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766120A065FD0091775B /* UITableView+Dequeue.swift */; };
 		827E766420A066300091775B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766320A066300091775B /* Identifiable.swift */; };
@@ -27,7 +31,6 @@
 		8298FF2B20A1DBED0019DC4F /* MeasurementCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */; };
 		8298FF2D20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */; };
 		8298FF3120A314830019DC4F /* AlertsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF3020A314830019DC4F /* AlertsController.swift */; };
-		8298FF3320A31A870019DC4F /* HasAlertsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF3220A31A870019DC4F /* HasAlertsController.swift */; };
 		8298FF3520A31AC60019DC4F /* AlertsControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8298FF3420A31AC60019DC4F /* AlertsControllerProtocol.swift */; };
 		82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798420950C7300CED1C6 /* LoadingVC.swift */; };
 		82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA798620950D6600CED1C6 /* CircleProgressView.swift */; };
@@ -41,11 +44,9 @@
 		82CA79A42097684000CED1C6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A32097684000CED1C6 /* NetworkDispatcher.swift */; };
 		82CA79A62097761C00CED1C6 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A52097761C00CED1C6 /* Dispatcher.swift */; };
 		82CA79A8209776DA00CED1C6 /* AirQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A7209776DA00CED1C6 /* AirQualityService.swift */; };
-		82CA79AA2097773400CED1C6 /* HasNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79A92097773400CED1C6 /* HasNetworkDispatcher.swift */; };
 		82CA79AD20977FCC00CED1C6 /* MeasurementStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79AC20977FCC00CED1C6 /* MeasurementStation.swift */; };
 		82CA79AF209780A700CED1C6 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79AE209780A700CED1C6 /* Sensor.swift */; };
 		82CA79B12097813100CED1C6 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79B02097813100CED1C6 /* SensorData.swift */; };
-		82CA79B32097868A00CED1C6 /* HasAirQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79B22097868A00CED1C6 /* HasAirQualityService.swift */; };
 		82CA79B6209786E500CED1C6 /* AirQualityServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA79B5209786E500CED1C6 /* AirQualityServiceProtocol.swift */; };
 		82CB9CD8209CE44900B778E0 /* ListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB9CD7209CE44900B778E0 /* ListTableVC.swift */; };
 		82CB9CDA209CE45D00B778E0 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB9CD9209CE45D00B778E0 /* ListProtocols.swift */; };
@@ -74,6 +75,10 @@
 		82329D1E20A74D1B0057270B /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/MeasurementStationVC.strings; sourceTree = "<group>"; };
 		82329D2D20A74DD10057270B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		82329D2F20A74DD40057270B /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		82329D3120A97E300057270B /* MeasurementStationsListVMTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationsListVMTest.swift; sourceTree = "<group>"; };
+		82329D3420A97EDA0057270B /* MockedAirQualityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedAirQualityService.swift; sourceTree = "<group>"; };
+		82329D3620A98BFE0057270B /* MeasurementStationVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationVMTests.swift; sourceTree = "<group>"; };
+		82329D3820A990840057270B /* MeasurementStationsLoadingVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationsLoadingVMTests.swift; sourceTree = "<group>"; };
 		827E765D20A0622D0091775B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		827E766120A065FD0091775B /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
 		827E766320A066300091775B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -92,7 +97,6 @@
 		8298FF2A20A1DBED0019DC4F /* MeasurementCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCellVM.swift; sourceTree = "<group>"; };
 		8298FF2C20A1DC0D0019DC4F /* MeasurementCellVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCellVMProtocol.swift; sourceTree = "<group>"; };
 		8298FF3020A314830019DC4F /* AlertsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsController.swift; sourceTree = "<group>"; };
-		8298FF3220A31A870019DC4F /* HasAlertsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasAlertsController.swift; sourceTree = "<group>"; };
 		8298FF3420A31AC60019DC4F /* AlertsControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsControllerProtocol.swift; sourceTree = "<group>"; };
 		82CA798420950C7300CED1C6 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		82CA798620950D6600CED1C6 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
@@ -106,11 +110,9 @@
 		82CA79A32097684000CED1C6 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		82CA79A52097761C00CED1C6 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		82CA79A7209776DA00CED1C6 /* AirQualityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityService.swift; sourceTree = "<group>"; };
-		82CA79A92097773400CED1C6 /* HasNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasNetworkDispatcher.swift; sourceTree = "<group>"; };
 		82CA79AC20977FCC00CED1C6 /* MeasurementStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStation.swift; sourceTree = "<group>"; };
 		82CA79AE209780A700CED1C6 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		82CA79B02097813100CED1C6 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
-		82CA79B22097868A00CED1C6 /* HasAirQualityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasAirQualityService.swift; sourceTree = "<group>"; };
 		82CA79B5209786E500CED1C6 /* AirQualityServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityServiceProtocol.swift; sourceTree = "<group>"; };
 		82CB9CD7209CE44900B778E0 /* ListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableVC.swift; sourceTree = "<group>"; };
 		82CB9CD9209CE45D00B778E0 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
@@ -150,6 +152,24 @@
 				827E766620A071B90091775B /* MeasurementStation */,
 			);
 			path = ApplicationControllers;
+			sourceTree = "<group>";
+		};
+		82329D3020A97E1A0057270B /* VMTests */ = {
+			isa = PBXGroup;
+			children = (
+				82329D3120A97E300057270B /* MeasurementStationsListVMTest.swift */,
+				82329D3620A98BFE0057270B /* MeasurementStationVMTests.swift */,
+				82329D3820A990840057270B /* MeasurementStationsLoadingVMTests.swift */,
+			);
+			path = VMTests;
+			sourceTree = "<group>";
+		};
+		82329D3320A97EC00057270B /* MockedDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				82329D3420A97EDA0057270B /* MockedAirQualityService.swift */,
+			);
+			path = MockedDependencies;
 			sourceTree = "<group>";
 		};
 		827E766520A070F20091775B /* ReusableControllers */ = {
@@ -212,6 +232,8 @@
 		828CFBAB209252BA00EDE038 /* SampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				82329D3320A97EC00057270B /* MockedDependencies */,
+				82329D3020A97E1A0057270B /* VMTests */,
 				828CFBAC209252BA00EDE038 /* SampleAppTests.swift */,
 				828CFBAE209252BA00EDE038 /* Info.plist */,
 			);
@@ -232,7 +254,6 @@
 			children = (
 				828CFBBB2092546100EDE038 /* Coordinator.swift */,
 				827E766320A066300091775B /* Identifiable.swift */,
-				82CA79B4209786AE00CED1C6 /* AppDependencies */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -334,16 +355,6 @@
 				82CA79B02097813100CED1C6 /* SensorData.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		82CA79B4209786AE00CED1C6 /* AppDependencies */ = {
-			isa = PBXGroup;
-			children = (
-				82CA79A92097773400CED1C6 /* HasNetworkDispatcher.swift */,
-				82CA79B22097868A00CED1C6 /* HasAirQualityService.swift */,
-				8298FF3220A31A870019DC4F /* HasAlertsController.swift */,
-			);
-			path = AppDependencies;
 			sourceTree = "<group>";
 		};
 		82CB9CD4209CE24600B778E0 /* List */ = {
@@ -482,7 +493,6 @@
 				82CA799D20974FB300CED1C6 /* AirQualityRequest.swift in Sources */,
 				82CB9CDD209CE79100B778E0 /* MeasurementStationsListVM.swift in Sources */,
 				82CB9CDA209CE45D00B778E0 /* ListProtocols.swift in Sources */,
-				82CA79B32097868A00CED1C6 /* HasAirQualityService.swift in Sources */,
 				82CA79A2209756FD00CED1C6 /* URLRequestConvertible.swift in Sources */,
 				827E766420A066300091775B /* Identifiable.swift in Sources */,
 				8298FF2420A07D6B0019DC4F /* MeasurementCell.swift in Sources */,
@@ -492,8 +502,6 @@
 				82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */,
 				828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */,
 				82CB9CD8209CE44900B778E0 /* ListTableVC.swift in Sources */,
-				82CA79AA2097773400CED1C6 /* HasNetworkDispatcher.swift in Sources */,
-				8298FF3320A31A870019DC4F /* HasAlertsController.swift in Sources */,
 				8298FF2B20A1DBED0019DC4F /* MeasurementCellVM.swift in Sources */,
 				82CA798720950D6600CED1C6 /* CircleProgressView.swift in Sources */,
 				82CA799B20974E1400CED1C6 /* HTTPMethod.swift in Sources */,
@@ -514,7 +522,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82329D3720A98BFE0057270B /* MeasurementStationVMTests.swift in Sources */,
+				82329D3220A97E300057270B /* MeasurementStationsListVMTest.swift in Sources */,
+				82329D3920A990840057270B /* MeasurementStationsLoadingVMTests.swift in Sources */,
 				828CFBAD209252BA00EDE038 /* SampleAppTests.swift in Sources */,
+				82329D3520A97EDA0057270B /* MockedAirQualityService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

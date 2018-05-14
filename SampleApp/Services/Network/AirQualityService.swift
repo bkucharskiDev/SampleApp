@@ -10,8 +10,6 @@ import Foundation
 
 final class AirQualityService: AirQualityServiceProtocol {
     
-    typealias Dependencies = HasNetworkDispatcher
-    
     //Cache
     private var allMeasurementStations: [MeasurementStation] = []
     

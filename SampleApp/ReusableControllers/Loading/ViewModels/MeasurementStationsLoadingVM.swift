@@ -10,21 +10,19 @@ import Foundation
 
 final class MeasurementStationsLoadingVM: LoadingVMProtocol {
     
-    typealias Dependencies = HasAirQualityService
-    
     weak var delegate: LoadingVMDelegate?
     
-    let dependencies: Dependencies
+    private let airQualityService: AirQualityServiceProtocol
     
     var handleLoadingSuccess: (() -> Void)?
     var handleLoadingFailure: ((Error?) -> Void)?
     
-    init(dependencies: Dependencies) {
-        self.dependencies = dependencies
+    init(airQualityService: AirQualityServiceProtocol) {
+        self.airQualityService = airQualityService
     }
     
     func loadResources() {
-        dependencies.airQualityService.downloadAllStations { [weak self] (result) in
+        airQualityService.downloadAllStations { [weak self] (result) in
             switch result {
             case .success:
                 self?.delegate?.didUpdateProgress(1.0)

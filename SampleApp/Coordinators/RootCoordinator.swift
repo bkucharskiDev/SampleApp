@@ -12,11 +12,11 @@ import UIKit
 final class RootCoordinator: Coordinator {
     
     let window: UIWindow
-    let appDependencies: AppDependencies
+    let appDependencies: AppDependency
     
     var childCoordinators: [Coordinator] = []
     
-    init(window: UIWindow, appDependencies: AppDependencies) {
+    init(window: UIWindow, appDependencies: AppDependency) {
         self.window = window
         self.appDependencies = appDependencies
     }
@@ -26,7 +26,7 @@ final class RootCoordinator: Coordinator {
     }
     
     private func showLoadingVC() {
-        let viewModel = MeasurementStationsLoadingVM(dependencies: appDependencies)
+        let viewModel = MeasurementStationsLoadingVM(airQualityService: appDependencies.airQualityService)
         viewModel.handleLoadingSuccess = { [weak self] in
             self?.showContent()
         }

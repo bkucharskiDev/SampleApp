@@ -9,10 +9,7 @@
 import Foundation
 import UIKit
 
-/// All project dependencies
-typealias AppDependencies = HasAirQualityService & HasAlertsController
-
-final class AppDependency: AppDependencies {
+final class AppDependency {
     
     lazy var alertsController: AlertsControllerProtocol = {
        return AlertsController()

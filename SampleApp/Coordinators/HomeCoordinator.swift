@@ -13,10 +13,10 @@ final class HomeCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
     
-    private let dependencies: AppDependencies
+    private let dependencies: AppDependency
     private let window: UIWindow
     
-    init(dependencies: AppDependencies, window: UIWindow) {
+    init(dependencies: AppDependency, window: UIWindow) {
         self.dependencies = dependencies
         self.window = window
     }
@@ -26,13 +26,13 @@ final class HomeCoordinator: Coordinator {
     }
     
     private func showMeasurementStationsList() {
-        let vm = MeasurementStationsListVM(dependencies: dependencies)
+        let vm = MeasurementStationsListVM(airQualityService: dependencies.airQualityService)
         
         vm.handleSelect = { [weak self] measurementStation in
             
             guard let `self` = self else { return }
             
-            let vm = MeasurementStationVM(dependencies: self.dependencies,
+            let vm = MeasurementStationVM(airQualityService: self.dependencies.airQualityService,
                                           measurementStation: measurementStation)
             
             let vc = MeasurementStationVC(viewModel: vm)

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return rootCoordinator
     }()
     
-    lazy var appDependencies: AppDependencies = {
+    lazy var appDependencies: AppDependency = {
         return AppDependency()
     }()
     

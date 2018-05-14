@@ -15,11 +15,9 @@ protocol MeasurementStationVMDelegate: class {
 
 final class MeasurementStationVM {
     
-    typealias Dependencies = HasAirQualityService
-    
     weak var delegate: MeasurementStationVMDelegate?
     
-    private let dependencies: Dependencies
+    private let airQualityService: AirQualityServiceProtocol
     private let measurementStation: MeasurementStation
     private var cellViewModels: [MeasurementCellVM] = []
     private var sensors: [Sensor] = []
@@ -37,11 +35,10 @@ final class MeasurementStationVM {
         return measurementStation.stationName
     }
     
-    var handleDownloadSuccess: (() -> Void)?
     var handleDownloadFailure: ((Error?) -> Void)?
     
-    init(dependencies: Dependencies, measurementStation: MeasurementStation) {
-        self.dependencies = dependencies
+    init(airQualityService: AirQualityServiceProtocol, measurementStation: MeasurementStation) {
+        self.airQualityService = airQualityService
         self.measurementStation = measurementStation
     }
     
@@ -49,9 +46,8 @@ final class MeasurementStationVM {
         return cellViewModels[indexPath.row]
     }
     
-    
     func getData() {
-        dependencies.airQualityService.getStationSensors(stationId: measurementStation.id) { [weak self] (result) in
+        airQualityService.getStationSensors(stationId: measurementStation.id) { [weak self] (result) in
             
             guard let `self` = self else { return }
             
@@ -67,7 +63,7 @@ final class MeasurementStationVM {
     
     private func getSensorData() {
         for (index, sensor) in sensors.enumerated() {
-            dependencies.airQualityService.getSensorData(sensorId: sensor.id, completion: { [weak self] (result) in
+            airQualityService.getSensorData(sensorId: sensor.id, completion: { [weak self] (result) in
                 guard let `self` = self else { return }
                 
                 switch result {

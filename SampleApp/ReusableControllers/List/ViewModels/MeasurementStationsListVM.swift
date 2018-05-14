@@ -10,11 +10,9 @@ import Foundation
  
 final class MeasurementStationsListVM: ListViewModelProtocol {
     
-    typealias Dependencies = HasAirQualityService
-    
     weak var delegate: ListViewModelDelegate?
     
-    private let dependencies: Dependencies
+    private let airQualityService: AirQualityServiceProtocol
     
     private var measurementStations: [[MeasurementStation]] = [] {
         didSet {
@@ -28,8 +26,8 @@ final class MeasurementStationsListVM: ListViewModelProtocol {
         return measurementStations.count
     }
     
-    init(dependencies: Dependencies) {
-        self.dependencies = dependencies
+    init(airQualityService: AirQualityServiceProtocol) {
+        self.airQualityService = airQualityService
         
         fetchStations()
     }
@@ -51,7 +49,7 @@ final class MeasurementStationsListVM: ListViewModelProtocol {
     }
     
     private func fetchStations() {
-        let allStations = dependencies.airQualityService.getAllStations()
+        let allStations = airQualityService.getAllStations()
         var stationsDictionary: [String: [MeasurementStation]] = [:]
         allStations.forEach {
             var stations = stationsDictionary[$0.city.name] ?? []
