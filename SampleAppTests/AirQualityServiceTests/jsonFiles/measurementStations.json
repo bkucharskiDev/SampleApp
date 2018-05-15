@@ -1,0 +1,82 @@
+ [
+  {
+  "id": 114,
+  "stationName": "Wrocław - Bartnicza",
+  "gegrLat": "51.115933",
+  "gegrLon": "17.141125",
+  "city": {
+  "id": 1064,
+  "name": "Wrocław",
+  "commune": {
+  "communeName": "Wrocław",
+  "districtName": "Wrocław",
+  "provinceName": "DOLNOŚLĄSKIE"
+  }
+  },
+  "addressStreet": "ul. Bartnicza"
+  },
+  {
+  "id": 117,
+  "stationName": "Wrocław - Korzeniowskiego",
+  "gegrLat": "51.129378",
+  "gegrLon": "17.029250",
+  "city": {
+  "id": 1064,
+  "name": "Wrocław",
+  "commune": {
+  "communeName": "Wrocław",
+  "districtName": "Wrocław",
+  "provinceName": "DOLNOŚLĄSKIE"
+  }
+  },
+  "addressStreet": "ul. Wyb. J.Conrada-Korzeniowskiego 18"
+  },
+  {
+  "id": 129,
+  "stationName": "Wrocław - Wiśniowa",
+  "gegrLat": "51.086225",
+  "gegrLon": "17.012689",
+  "city": {
+  "id": 1064,
+  "name": "Wrocław",
+  "commune": {
+  "communeName": "Wrocław",
+  "districtName": "Wrocław",
+  "provinceName": "DOLNOŚLĄSKIE"
+  }
+  },
+  "addressStreet": "al. Wiśniowa/ul. Powst. Śląskich"
+  },
+  {
+  "id": 52,
+  "stationName": "Legnica - Rzeczypospolitej",
+  "gegrLat": "51.204503",
+  "gegrLon": "16.180513",
+  "city": {
+  "id": 453,
+  "name": "Legnica",
+  "commune": {
+  "communeName": "Legnica",
+  "districtName": "Legnica",
+  "provinceName": "DOLNOŚLĄSKIE"
+  }
+  },
+  "addressStreet": "al. Rzeczypospolitej 10/12"
+  },
+  {
+  "id": 109,
+  "stationName": "Wałbrzych - Wysockiego",
+  "gegrLat": "50.768729",
+  "gegrLon": "16.269677",
+  "city": {
+  "id": 998,
+  "name": "Wałbrzych",
+  "commune": {
+  "communeName": "Wałbrzych",
+  "districtName": "Wałbrzych",
+  "provinceName": "DOLNOŚLĄSKIE"
+  }
+  },
+  "addressStreet": "ul. Wysockiego 11"
+  }
+  ]

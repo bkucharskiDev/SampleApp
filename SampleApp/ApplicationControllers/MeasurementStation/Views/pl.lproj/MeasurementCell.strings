@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Key:"; ObjectID = "3Mt-l7-TEI"; */
+"3Mt-l7-TEI.text" = "Klucz:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HeB-GO-iN1"; */
+"HeB-GO-iN1.text" = "Label";
+
+/* Class = "UILabel"; text = "Date:"; ObjectID = "PQ4-ci-507"; */
+"PQ4-ci-507.text" = "Data:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZM8-g9-s00"; */
+"ZM8-g9-s00.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aHr-IB-06o"; */
+"aHr-IB-06o.text" = "Label";
+
+/* Class = "UILabel"; text = "Value:"; ObjectID = "j7I-cN-Kbj"; */
+"j7I-cN-Kbj.text" = "Wartość:";

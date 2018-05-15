@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return rootCoordinator
     }()
     
-    lazy var appDependencies: AppDependencies = {
-        return AppDependency(window: window!)
+    lazy var appDependencies: AppDependency = {
+        return AppDependency()
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

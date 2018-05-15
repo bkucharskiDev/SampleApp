@@ -12,11 +12,11 @@ import UIKit
 final class RootCoordinator: Coordinator {
     
     let window: UIWindow
-    let appDependencies: AppDependencies
+    let appDependencies: AppDependency
     
     var childCoordinators: [Coordinator] = []
     
-    init(window: UIWindow, appDependencies: AppDependencies) {
+    init(window: UIWindow, appDependencies: AppDependency) {
         self.window = window
         self.appDependencies = appDependencies
     }
@@ -26,7 +26,7 @@ final class RootCoordinator: Coordinator {
     }
     
     private func showLoadingVC() {
-        let viewModel = MeasurementStationsLoadingVM(dependencies: appDependencies)
+        let viewModel = MeasurementStationsLoadingVM(airQualityService: appDependencies.airQualityService)
         viewModel.handleLoadingSuccess = { [weak self] in
             self?.showContent()
         }
@@ -34,19 +34,25 @@ final class RootCoordinator: Coordinator {
         let vc = LoadingVC(viewModel: viewModel)
         
         viewModel.handleLoadingFailure = { [weak self, weak vc, weak viewModel] error in
-            viewModel?.setProgressToZero()
+            guard let vc = vc, let vm = viewModel else { return }
             
-            let alertActionHandler = {
-                viewModel?.loadResources()
-                return
-            }
-            let alertAction = AlertAction(title: "Try again", actionHandler: alertActionHandler)
-            self?.appDependencies.alertsController.showNetworkErrorAlert(error: error,
-                                                                         actions: [alertAction],
-                                                                         inViewController: vc!)
+            self?.showNetworkAlert(vc: vc, vm: vm, error: error)
         }
         
         window.rootViewController = vc
+    }
+    
+    //MARK: Helpers
+    private func showNetworkAlert(vc: UIViewController, vm: MeasurementStationsLoadingVM, error: Error?) {
+        
+        let alertActionHandler = {
+            vm.loadResources()
+        }
+        
+        let alertAction = AlertAction(title: "Try again".localized, actionHandler: alertActionHandler)
+        appDependencies.alertsController.showNetworkErrorAlert(error: error,
+                                                                     actions: [alertAction],
+                                                                     inViewController: vc)
     }
 }
 

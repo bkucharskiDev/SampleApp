@@ -56,7 +56,7 @@ enum AirQualityRequest: Request, URLRequestConvertible {
         }
     }
     
-    var headers: [String : Any]? {
+    var headers: [String : String]? {
         switch self {
         case .allStations, .stationSensors, .sensorData:
             return nil

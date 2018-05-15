@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Station name:"; ObjectID = "0Ru-K3-lbq"; */
+"0Ru-K3-lbq.text" = "Nazwa stacji:";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "g99-qT-iga"; */
+"g99-qT-iga.text" = "Miasto";
+
+/* Class = "UILabel"; text = "Station name"; ObjectID = "gPI-vS-Owt"; */
+"gPI-vS-Owt.text" = "Nazwa stacji";
+
+/* Class = "UILabel"; text = "City:"; ObjectID = "nDB-fd-uw8"; */
+"nDB-fd-uw8.text" = "Miasto:";
