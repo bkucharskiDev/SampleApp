@@ -67,6 +67,11 @@ final class MeasurementStationVM {
     }
     
     private func getSensorData() {
+        
+        if sensors.isEmpty {
+            delegate?.didUpdateData()
+        }
+        
         for (index, sensor) in sensors.enumerated() {
             airQualityService.getSensorData(sensorId: sensor.id, completion: { [weak self] (result) in
                 guard let `self` = self else { return }
@@ -91,6 +96,10 @@ final class MeasurementStationVM {
     private func prepareCellVms() {
         
         let filteredSensorData = getSensorDataWithoutEmptyValues()
+        
+        if filteredSensorData.isEmpty {
+            delegate?.didUpdateData()
+        }
         
         for (index, data) in filteredSensorData.enumerated() {
             

@@ -11,20 +11,28 @@ import XCTest
 
 class MockedMeasurementStationVMDelegate: MeasurementStationVMDelegate {
     
-    var testExpectation: XCTestExpectation?
+    weak var testExpectation: XCTestExpectation?
     
     func didUpdateData() {
         testExpectation?.fulfill()
     }
+    
+    func didStartUpdatingData() { }
+    func didFailUpdatingData() { }
 }
 
 class MeasurementStationVMTests: XCTestCase {
     
     let mockedMeasurementStation = MeasurementStation(id: 0, stationName: "MOCKEDSTATION", city: MeasurementStation.City(id: 0, name: "MOCKEDCITY"))
     let mockedAirQualityService = MockedAirQualityService(isDownloadSuccess: true)
+    let mockedDelegate = MockedMeasurementStationVMDelegate()
     lazy var measurementStationVM = MeasurementStationVM(airQualityService: mockedAirQualityService, measurementStation: mockedMeasurementStation)
     
-    func testCity() {
+    override func setUp() {
+        mockedAirQualityService.changeDownloadResult(isSuccess: true)
+    }
+    
+    func testCityName() {
         let cityName = measurementStationVM.city
         XCTAssertTrue(cityName == "MOCKEDCITY")
     }
@@ -46,14 +54,17 @@ class MeasurementStationVMTests: XCTestCase {
     }
     
     func testGetDataSuccess() {
-        mockedAirQualityService.changeDownloadResult(isSuccess: true)
-        
         let testExpectation = XCTestExpectation()
-        let mockedDelegate = MockedMeasurementStationVMDelegate()
         mockedDelegate.testExpectation = testExpectation
         measurementStationVM.delegate = mockedDelegate
         
         measurementStationVM.getData()
         wait(for: [testExpectation], timeout: 0.1)
+    }
+    
+    func testNumberOfRows() {
+        measurementStationVM.getData()
+        let numberOfRows = measurementStationVM.numberOfRows
+        XCTAssertTrue(numberOfRows > 0)
     }
 }
