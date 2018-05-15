@@ -140,6 +140,7 @@
 		822A00AE20925F6C001DD101 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				822A00B3209261F9001DD101 /* AppDependency.swift */,
 				82CA799720973E9000CED1C6 /* Network */,
 				8298FF2F20A314680019DC4F /* Alerts */,
 			);
@@ -170,6 +171,16 @@
 				82329D3420A97EDA0057270B /* MockedAirQualityService.swift */,
 			);
 			path = MockedDependencies;
+			sourceTree = "<group>";
+		};
+		82329D3A20AAD1C10057270B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				828CFB9E209252BA00EDE038 /* Assets.xcassets */,
+				82329D2E20A74DD10057270B /* Localizable.strings */,
+				828CFBA3209252BA00EDE038 /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		827E766520A070F20091775B /* ReusableControllers */ = {
@@ -214,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				828CFB97209252BA00EDE038 /* AppDelegate.swift */,
-				822A00B3209261F9001DD101 /* AppDependency.swift */,
 				822A00B520926AC0001DD101 /* ApplicationControllers */,
 				827E766520A070F20091775B /* ReusableControllers */,
 				822A00AE20925F6C001DD101 /* Services */,
@@ -222,9 +232,7 @@
 				828CFBB7209253E600EDE038 /* Coordinators */,
 				82CA79882095120600CED1C6 /* Extensions */,
 				8298FF2E20A313E30019DC4F /* Enums */,
-				828CFB9E209252BA00EDE038 /* Assets.xcassets */,
-				82329D2E20A74DD10057270B /* Localizable.strings */,
-				828CFBA3209252BA00EDE038 /* Info.plist */,
+				82329D3A20AAD1C10057270B /* SupportingFiles */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -688,7 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ETFFBZ9FU2;
-				INFOPLIST_FILE = SampleApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SampleApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bartosz-Kucharski.SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -703,7 +711,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ETFFBZ9FU2;
-				INFOPLIST_FILE = SampleApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SampleApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bartosz-Kucharski.SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";

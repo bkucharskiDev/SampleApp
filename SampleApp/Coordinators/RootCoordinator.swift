@@ -34,22 +34,26 @@ final class RootCoordinator: Coordinator {
         let vc = LoadingVC(viewModel: viewModel)
         
         viewModel.handleLoadingFailure = { [weak self, weak vc, weak viewModel] error in
-            viewModel?.setProgressToZero()
+            guard let vc = vc, let vm = viewModel else { return }
             
-            let alertActionHandler = {
-                viewModel?.loadResources()
-                return
-            }
-            
-            guard let vc = vc else { return }
-            
-            let alertAction = AlertAction(title: "Try again".localized, actionHandler: alertActionHandler)
-            self?.appDependencies.alertsController.showNetworkErrorAlert(error: error,
-                                                                         actions: [alertAction],
-                                                                         inViewController: vc)
+            self?.showNetworkAlert(vc: vc, vm: vm, error: error)
         }
         
         window.rootViewController = vc
+    }
+    
+    //MARK: Helpers
+    private func showNetworkAlert(vc: UIViewController, vm: MeasurementStationsLoadingVM, error: Error?) {
+        vm.setProgressToZero()
+        
+        let alertActionHandler = {
+            vm.loadResources()
+        }
+        
+        let alertAction = AlertAction(title: "Try again".localized, actionHandler: alertActionHandler)
+        appDependencies.alertsController.showNetworkErrorAlert(error: error,
+                                                                     actions: [alertAction],
+                                                                     inViewController: vc)
     }
 }
 

@@ -12,7 +12,7 @@ final class NetworkDispatcher: NSObject, Dispatcher {
     
     private lazy var defaultUrlSession = URLSession(configuration: .default)
     
-    private let dispatchQueue = DispatchQueue(label: "NetworkDispatcher")
+    private let dispatchQueue = DispatchQueue(label: "NetworkDispatcherQueue")
     
     func execute(urlRequest: URLRequest, completion: @escaping ((Result<Data>) -> Void)) {
         

@@ -35,7 +35,7 @@ extension URLRequestConvertible where Self: Request {
         var urlRequest = URLRequest(url: url)
         
         headers?.forEach {
-            urlRequest.addValue($0.value as! String, forHTTPHeaderField: $0.key)
+            urlRequest.addValue($0.value, forHTTPHeaderField: $0.key)
         }
         
         return urlRequest

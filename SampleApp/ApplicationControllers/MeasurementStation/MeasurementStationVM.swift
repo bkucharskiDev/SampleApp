@@ -83,34 +83,42 @@ final class MeasurementStationVM {
     }
     
     private func prepareCellVms() {
-        for (index, sensor) in sensorData.enumerated() {
-            guard !sensor.values.isEmpty else {
-                if index == sensorData.endIndex - 1 {
-                    delegate?.didUpdateData()
-                }
-                continue
-            }
+        
+        let filteredSensorData = getSensorDataWithoutEmptyValues()
+        
+        for (index, data) in filteredSensorData.enumerated() {
             
             let cellVM: MeasurementCellVM
+            var date: String = ""
+            var value: String = ""
             
-            if let sensorData = sensor.values.first(where: {
-                $0.value != nil
-            }) {
-                cellVM = MeasurementCellVM(key: sensor.key,
-                                               date: sensorData.date,
-                                               value: "\(sensorData.value!)")
-            }
-            else {
-                let firstValue = sensor.values.first!
-                cellVM = MeasurementCellVM(key: sensor.key,
-                                           date: firstValue.date,
-                                           value: "-")
+            if let nonNilSensorValue = getFirstNonNilValueFrom(sensorData: data) {
+                date = nonNilSensorValue.date
+                value = "\(nonNilSensorValue.value!)"
+            } else {
+                if let firstValue = data.values.first {
+                    date = firstValue.date
+                    value = "-"
+                }
             }
             
+            cellVM = MeasurementCellVM(key: data.key, date: date, value: value)
             cellViewModels.append(cellVM)
-            if index == sensorData.endIndex - 1 {
+            if index == filteredSensorData.endIndex - 1 {
                 delegate?.didUpdateData()
             }
         }
+    }
+    
+    private func getSensorDataWithoutEmptyValues() -> [SensorData] {
+        return sensorData.filter({
+            !$0.values.isEmpty
+        })
+    }
+    
+    private func getFirstNonNilValueFrom(sensorData: SensorData) -> SensorData.Value? {
+        return sensorData.values.first(where: {
+            $0.value != nil
+        })
     }
 }
