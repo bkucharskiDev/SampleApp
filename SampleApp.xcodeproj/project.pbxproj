@@ -17,6 +17,7 @@
 		82329D3520A97EDA0057270B /* MockedAirQualityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D3420A97EDA0057270B /* MockedAirQualityService.swift */; };
 		82329D3720A98BFE0057270B /* MeasurementStationVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D3620A98BFE0057270B /* MeasurementStationVMTests.swift */; };
 		82329D3920A990840057270B /* MeasurementStationsLoadingVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D3820A990840057270B /* MeasurementStationsLoadingVMTests.swift */; };
+		82329D3D20AAD7CE0057270B /* UIView+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329D3C20AAD7CE0057270B /* UIView+Toggle.swift */; };
 		827E765E20A0622D0091775B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E765D20A0622D0091775B /* HomeCoordinator.swift */; };
 		827E766220A065FD0091775B /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766120A065FD0091775B /* UITableView+Dequeue.swift */; };
 		827E766420A066300091775B /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827E766320A066300091775B /* Identifiable.swift */; };
@@ -79,6 +80,7 @@
 		82329D3420A97EDA0057270B /* MockedAirQualityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedAirQualityService.swift; sourceTree = "<group>"; };
 		82329D3620A98BFE0057270B /* MeasurementStationVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationVMTests.swift; sourceTree = "<group>"; };
 		82329D3820A990840057270B /* MeasurementStationsLoadingVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementStationsLoadingVMTests.swift; sourceTree = "<group>"; };
+		82329D3C20AAD7CE0057270B /* UIView+Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Toggle.swift"; sourceTree = "<group>"; };
 		827E765D20A0622D0091775B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		827E766120A065FD0091775B /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
 		827E766320A066300091775B /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				82CA79892095194200CED1C6 /* UIView+Constraints.swift */,
 				827E766120A065FD0091775B /* UITableView+Dequeue.swift */,
 				82329D0620A7495D0057270B /* String+Localization.swift */,
+				82329D3C20AAD7CE0057270B /* UIView+Toggle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				82CA79B12097813100CED1C6 /* SensorData.swift in Sources */,
 				827E766920A072450091775B /* MeasurementStationVC.swift in Sources */,
 				82CA798520950C7300CED1C6 /* LoadingVC.swift in Sources */,
+				82329D3D20AAD7CE0057270B /* UIView+Toggle.swift in Sources */,
 				828CFB98209252BA00EDE038 /* AppDelegate.swift in Sources */,
 				82CB9CD8209CE44900B778E0 /* ListTableVC.swift in Sources */,
 				8298FF2B20A1DBED0019DC4F /* MeasurementCellVM.swift in Sources */,

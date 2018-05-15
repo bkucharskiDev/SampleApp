@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeasurementStationVC" customModule="SampleApp" customModuleProvider="target">
             <connections>
                 <outlet property="cityLabel" destination="g99-qT-iga" id="JJF-wY-LEB"/>
+                <outlet property="loadingView" destination="OIf-2I-mZ8" id="4gW-Wd-x0h"/>
                 <outlet property="measurementTableView" destination="a3T-LR-PKm" id="ZMx-EN-6lg"/>
                 <outlet property="stationNameLabel" destination="gPI-vS-Owt" id="UmA-TS-gr1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -70,13 +71,30 @@
                         <outlet property="delegate" destination="-1" id="Jp5-3z-geb"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIf-2I-mZ8">
+                    <rect key="frame" x="0.0" y="20" width="375" height="646.5"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="UYp-8f-wTt">
+                            <rect key="frame" x="169" y="305" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="UYp-8f-wTt" firstAttribute="centerY" secondItem="OIf-2I-mZ8" secondAttribute="centerY" id="OMO-Es-jie"/>
+                        <constraint firstItem="UYp-8f-wTt" firstAttribute="centerX" secondItem="OIf-2I-mZ8" secondAttribute="centerX" id="z0g-0a-jvj"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="a3T-LR-PKm" firstAttribute="top" secondItem="cvC-6J-KmS" secondAttribute="bottom" constant="50" id="DSl-SJ-Tbd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OIf-2I-mZ8" secondAttribute="bottom" id="IJN-kz-hIC"/>
                 <constraint firstItem="cvC-6J-KmS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="K1B-yH-F31"/>
+                <constraint firstItem="OIf-2I-mZ8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aUS-KF-0jL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a3T-LR-PKm" secondAttribute="trailing" id="dgS-gy-ZKb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OIf-2I-mZ8" secondAttribute="trailing" id="gf2-Uh-KX3"/>
                 <constraint firstItem="a3T-LR-PKm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iFV-Av-hgl"/>
+                <constraint firstItem="OIf-2I-mZ8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mGE-bE-Yvb"/>
                 <constraint firstItem="cvC-6J-KmS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="upL-3r-c7f"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cvC-6J-KmS" secondAttribute="trailing" constant="10" id="wIj-QA-vOS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="a3T-LR-PKm" secondAttribute="bottom" id="yFv-6h-zzc"/>

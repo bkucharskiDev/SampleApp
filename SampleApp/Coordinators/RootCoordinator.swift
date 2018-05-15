@@ -44,7 +44,6 @@ final class RootCoordinator: Coordinator {
     
     //MARK: Helpers
     private func showNetworkAlert(vc: UIViewController, vm: MeasurementStationsLoadingVM, error: Error?) {
-        vm.setProgressToZero()
         
         let alertActionHandler = {
             vm.loadResources()

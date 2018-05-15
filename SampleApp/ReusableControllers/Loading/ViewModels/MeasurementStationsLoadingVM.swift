@@ -34,8 +34,4 @@ final class MeasurementStationsLoadingVM: LoadingVMProtocol {
             }
         }
     }
-    
-    func setProgressToZero() {
-        delegate?.didUpdateProgress(0)
-    }
 }

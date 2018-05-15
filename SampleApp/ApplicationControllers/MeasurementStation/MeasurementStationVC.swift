@@ -13,6 +13,7 @@ class MeasurementStationVC: UIViewController, Identifiable {
     @IBOutlet private weak var cityLabel: UILabel!
     @IBOutlet private weak var stationNameLabel: UILabel!
     @IBOutlet private weak var measurementTableView: UITableView!
+    @IBOutlet private weak var loadingView: UIView!
     
     private let viewModel: MeasurementStationVM
 
@@ -74,7 +75,16 @@ extension MeasurementStationVC: UITableViewDataSource {
 // MARK: - MeasurementStationVMDelegate
 extension MeasurementStationVC: MeasurementStationVMDelegate {
     
+    func didStartUpdatingData() {
+        loadingView.toggle(isVisible: true)
+    }
+    
+    func didFailUpdatingData() {
+        loadingView.toggle(isVisible: false)
+    }
+    
     func didUpdateData() {
         measurementTableView.reloadData()
+        loadingView.toggle(isVisible: false)
     }
 }

@@ -10,6 +10,8 @@ import Foundation
 
 protocol MeasurementStationVMDelegate: class {
     
+    func didStartUpdatingData()
+    func didFailUpdatingData()
     func didUpdateData()
 }
 
@@ -51,12 +53,15 @@ final class MeasurementStationVM {
             
             guard let `self` = self else { return }
             
+            self.delegate?.didStartUpdatingData()
+            
             switch result {
             case .success(let sensors):
                 self.sensors = sensors
                 self.getSensorData()
             case .failure(let error):
-               self.handleDownloadFailure?(error)
+                self.handleDownloadFailure?(error)
+                self.delegate?.didFailUpdatingData()
             }
         }
     }
@@ -76,6 +81,7 @@ final class MeasurementStationVM {
                     }
                 case .failure(let error):
                     self.handleDownloadFailure?(error)
+                    self.delegate?.didFailUpdatingData()
                     break
                 }
             })
